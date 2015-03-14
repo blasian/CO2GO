@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface SearchViewController : ViewController
+@interface SearchViewController : ViewController <UISearchDisplayDelegate>
 
 
 
