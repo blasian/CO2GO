@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Trip.h"
 #import <Parse/Parse.h>
+#import "StatisticsTableViewController.h"
+#import "SearchViewController.h"
 
 @interface ViewController ()
 
@@ -23,10 +25,31 @@
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
 @property (strong, nonatomic) Trip *trip;
 @property (strong, nonatomic) Parse *db;
+@property (weak, nonatomic) IBOutlet UIButton *viewStatsButton;
+@property (weak, nonatomic) IBOutlet UIButton *vehicleButton;
+
 
 @end
 
 @implementation ViewController
+- (IBAction)statButtonPressed:(id)sender {
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
+    UIViewController *initialViewController = [secondStoryBoard instantiateInitialViewController];
+    [self.navigationController pushViewController:initialViewController animated:YES];
+}
+
+- (IBAction)vehicleButtonPressed:(id)sender {
+    SearchViewController *searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
+    [self.navigationController pushViewController:searchViewController animated:YES];
+    
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"StatisticsTableSegue"]) {
+        NSLog(@"in prepare for segue");
+    }
+    
+}
 
 - (IBAction)trackButtonPressed:(id)sender {
     if (!self.track_button.selected) {
@@ -68,13 +91,7 @@
     self.location = self.clm.location;
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
-    
-    self.db = [[Firebase alloc] initWithUrl:@"https://co2gocars.firebase.com/"];
-    [self.db observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        NSLog(@"%@", snapshot.value);
-    } withCancelBlock:^(NSError *error) {
-        NSLog(@"%@", error.description);
-    }];
+
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

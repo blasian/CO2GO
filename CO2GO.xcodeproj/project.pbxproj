@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */; };
 		581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581A52071AB4BC2C00254F29 /* SearchViewController.m */; };
 		581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581A52081AB4BC2C00254F29 /* SearchViewController.xib */; };
 		581A52101AB4CB4B00254F29 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581A520F1AB4CB4B00254F29 /* CFNetwork.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsTableStoryboard.storyboard; sourceTree = "<group>"; };
 		581A52061AB4BC2C00254F29 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		581A52071AB4BC2C00254F29 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		581A52081AB4BC2C00254F29 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				58E39E531AB438BD00400CF9 /* Trip.h */,
 				58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */,
 				58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */,
+				56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */,
 				581A52061AB4BC2C00254F29 /* SearchViewController.h */,
 				581A52071AB4BC2C00254F29 /* SearchViewController.m */,
 				581A52081AB4BC2C00254F29 /* SearchViewController.xib */,
@@ -290,6 +293,7 @@
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
 				581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
+				56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
