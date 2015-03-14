@@ -51,12 +51,14 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *pastStatisticsTableIdentifier = @"StatisticsTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pastStatisticsTableIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTableCell"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeZone:[NSTimeZone defaultTimeZone]];
+    
     cell.textLabel.text = [formatter stringFromDate:((Trip *)[self.trips objectAtIndex:indexPath.row]).date];
     return cell;
 }
