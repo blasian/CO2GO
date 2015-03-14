@@ -14,6 +14,8 @@
 		58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E39E2F1AB3EA3C00400CF9 /* Images.xcassets */; };
 		58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E39E311AB3EA3C00400CF9 /* LaunchScreen.xib */; };
 		58E39E3F1AB3EA3C00400CF9 /* CO2GOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E3E1AB3EA3C00400CF9 /* CO2GOTests.m */; };
+		58E39E491AB3EB5700400CF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E39E481AB3EB5700400CF9 /* CoreLocation.framework */; };
+		58E39E511AB4058800400CF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E39E501AB4058800400CF9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		58E39E381AB3EA3C00400CF9 /* CO2GOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CO2GOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E39E3D1AB3EA3C00400CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E39E3E1AB3EA3C00400CF9 /* CO2GOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CO2GOTests.m; sourceTree = "<group>"; };
+		58E39E481AB3EB5700400CF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		58E39E501AB4058800400CF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E39E511AB4058800400CF9 /* MapKit.framework in Frameworks */,
+				58E39E491AB3EB5700400CF9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		58E39E161AB3EA3C00400CF9 = {
 			isa = PBXGroup;
 			children = (
+				58E39E501AB4058800400CF9 /* MapKit.framework */,
+				58E39E481AB3EB5700400CF9 /* CoreLocation.framework */,
 				58E39E211AB3EA3C00400CF9 /* CO2GO */,
 				58E39E3B1AB3EA3C00400CF9 /* CO2GOTests */,
 				58E39E201AB3EA3C00400CF9 /* Products */,
