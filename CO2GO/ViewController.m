@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Trip.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
 @property (strong, nonatomic) Trip *trip;
+@property (strong, nonatomic) Parse *db;
 
 @end
 
@@ -66,13 +68,20 @@
     self.location = self.clm.location;
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
+    
+    self.db = [[Firebase alloc] initWithUrl:@"https://co2gocars.firebase.com/"];
+    [self.db observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSLog(@"%@", snapshot.value);
+    } withCancelBlock:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     self.location = locations.lastObject;
     self.speed = self.location.speed * 3.6;
     self.distance = [self.origin distanceFromLocation:self.location] / 1000;
-    [self.speed_label setText:[NSString stringWithFormat:@"%d", (int) self.speed]];
+    [self.speed_label setText:[NSString stringWithFormat:@"%f", self.speed]];
     [self.distance_label setText: [NSString stringWithFormat:@"%d", (int) self.distance]];
 }
 

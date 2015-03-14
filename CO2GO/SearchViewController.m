@@ -7,10 +7,12 @@
 //
 
 #import "SearchViewController.h"
+#import <Firebase/Firebase.h>
 
 @interface SearchViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchDisplay;
+@property (strong, nonatomic) Firebase *ref;
 
 @end
 
@@ -20,7 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Create a reference to a Firebase location
+    self.ref = [[Firebase alloc] initWithUrl:@"https://co2gocars.firebase.com/"];
+    [self.ref observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSLog(@"%@", snapshot.value);
+    } withCancelBlock:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
