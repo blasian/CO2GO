@@ -17,30 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
                                 <rect key="frame" x="275" y="499" width="51" height="30"/>
                                 <state key="normal" title="TRACK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTracking:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lte-vl-aLE"/>
+                                    <action selector="trackButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MTD-hQ-ig4"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="491"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
+                                <rect key="frame" x="16" y="0.0" width="568" height="253"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="kFC-4f-am0"/>
+                                </constraints>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
-                                <rect key="frame" x="204" y="540" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
+                                <rect key="frame" x="66" y="540" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
-                                <rect key="frame" x="313" y="540" width="56" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
+                                <rect key="frame" x="478" y="540" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytq-iG-Ben">
+                                <rect key="frame" x="258" y="420" width="85" height="30"/>
+                                <state key="normal" title="Vehicle Type">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="vehicleTypeSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nJH-id-nOb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -48,11 +60,23 @@
                             <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="3oz-Gc-RDv"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4g7-BO-YQA"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5e5-4b-EvA"/>
-                            <constraint firstItem="2LE-OQ-byh" firstAttribute="top" secondItem="pRI-OJ-9TH" secondAttribute="bottom" constant="8" symbolic="YES" id="9lL-NV-ZyD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ytq-iG-Ben" secondAttribute="bottom" constant="150" id="Ek9-6h-rOa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E07-aC-Yme" secondAttribute="bottom" constant="39" id="Hot-RF-izb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="MXN-rT-2Jl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="bPc-sJ-jAm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" id="emS-Gn-mnN"/>
+                            <constraint firstAttribute="centerX" secondItem="Ytq-iG-Ben" secondAttribute="centerX" id="fnQ-j4-Rxg"/>
                             <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="pMx-Zf-KkJ"/>
+                            <constraint firstItem="E07-aC-Yme" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="11" id="pwv-GQ-4kL"/>
+                            <constraint firstAttribute="centerX" secondItem="Ytq-iG-Ben" secondAttribute="centerX" id="xdk-S0-jf7"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zCe-6E-NmV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5e5-4b-EvA"/>
+                                <exclude reference="bPc-sJ-jAm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="distance_label" destination="E07-aC-Yme" id="oJ9-br-f6U"/>

@@ -12,7 +12,5 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
-
-
 @end
 

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Trip : NSObject
 
 @property (nonatomic) int co2;
-@property (nonatomic) int distance;
-@property (nonatomic) NSString *date;
+@property (nonatomic) CLLocationDistance distance;
+@property (nonatomic) NSDate *date;
 @property (nonatomic) NSString *transitType;
 
 @end

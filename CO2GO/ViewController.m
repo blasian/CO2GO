@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Trip.h"
 
 @interface ViewController ()
 
@@ -19,28 +20,40 @@
 @property (strong, nonatomic) CLLocation* origin;
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
-
+@property (strong, nonatomic) Trip *trip;
 
 @end
 
 @implementation ViewController
 
-- (IBAction)startTracking:(id)sender {
+- (IBAction)trackButtonPressed:(id)sender {
     if (!self.track_button.selected) {
-        self.origin = self.location;
-        [self.clm startUpdatingLocation];
-        [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-        [self.map setShowsUserLocation:YES];
-        self.origin = self.location;
-        self.track_button.selected = YES;
+        [self startTracking];
     } else {
-        [self.clm stopUpdatingLocation];
-        [self.map setShowsUserLocation:NO];
-        self.track_button.selected = NO;
-        self.distance = [self.origin distanceFromLocation:self.location];
-        [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
+        [self stopTracking];
     }
 }
+
+- (void)startTracking {
+    self.origin = self.location;
+    [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    [self.map setShowsUserLocation:YES];
+    self.track_button.selected = YES;
+    [self.clm startUpdatingLocation];
+    self.trip = [[Trip alloc] init];
+    self.trip.date = [NSDate date];
+}
+
+- (void)stopTracking {
+    [self.clm stopUpdatingLocation];
+    [self.map setShowsUserLocation:NO];
+    self.track_button.selected = NO;
+    self.trip.distance = self.distance;
+}
+
+- (IBAction)vehicleTypeSelected:(id)sender {
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,14 +62,17 @@
     self.clm.desiredAccuracy = kCLLocationAccuracyBest;
     self.clm.distanceFilter = kCLDistanceFilterNone;
     [self.clm requestAlwaysAuthorization];
+    self.location = self.clm.location;
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     self.location = locations.lastObject;
-    self.speed = self.location.speed;
-    [self.speed_label setText:[NSString stringWithFormat:@"%f", self.location.speed]];
+    self.speed = self.location.speed * 3.6;
+    self.distance = [self.origin distanceFromLocation:self.location] / 1000;
+    [self.speed_label setText:[NSString stringWithFormat:@"%d", (int) self.speed]];
+    [self.distance_label setText: [NSString stringWithFormat:@"%d", (int) self.distance]];
 }
 
 

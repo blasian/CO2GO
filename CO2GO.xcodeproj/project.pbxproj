@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581A52071AB4BC2C00254F29 /* SearchViewController.m */; };
+		581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581A52081AB4BC2C00254F29 /* SearchViewController.xib */; };
 		58E39E251AB3EA3C00400CF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E241AB3EA3C00400CF9 /* main.m */; };
 		58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E271AB3EA3C00400CF9 /* AppDelegate.m */; };
 		58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E2A1AB3EA3C00400CF9 /* ViewController.m */; };
@@ -16,6 +18,8 @@
 		58E39E3F1AB3EA3C00400CF9 /* CO2GOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E3E1AB3EA3C00400CF9 /* CO2GOTests.m */; };
 		58E39E491AB3EB5700400CF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E39E481AB3EB5700400CF9 /* CoreLocation.framework */; };
 		58E39E511AB4058800400CF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E39E501AB4058800400CF9 /* MapKit.framework */; };
+		58E39E561AB438BD00400CF9 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E521AB438BD00400CF9 /* Trip.m */; };
+		58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		581A52061AB4BC2C00254F29 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		581A52071AB4BC2C00254F29 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		581A52081AB4BC2C00254F29 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		58E39E1F1AB3EA3C00400CF9 /* CO2GO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CO2GO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E39E231AB3EA3C00400CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E39E241AB3EA3C00400CF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,6 +51,10 @@
 		58E39E3E1AB3EA3C00400CF9 /* CO2GOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CO2GOTests.m; sourceTree = "<group>"; };
 		58E39E481AB3EB5700400CF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58E39E501AB4058800400CF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		58E39E521AB438BD00400CF9 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		58E39E531AB438BD00400CF9 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTableViewController.m; sourceTree = "<group>"; };
+		58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTableViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +104,13 @@
 				58E39E271AB3EA3C00400CF9 /* AppDelegate.m */,
 				58E39E291AB3EA3C00400CF9 /* ViewController.h */,
 				58E39E2A1AB3EA3C00400CF9 /* ViewController.m */,
+				58E39E521AB438BD00400CF9 /* Trip.m */,
+				58E39E531AB438BD00400CF9 /* Trip.h */,
+				58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */,
+				58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */,
+				581A52061AB4BC2C00254F29 /* SearchViewController.h */,
+				581A52071AB4BC2C00254F29 /* SearchViewController.m */,
+				581A52081AB4BC2C00254F29 /* SearchViewController.xib */,
 				58E39E2C1AB3EA3C00400CF9 /* Main.storyboard */,
 				58E39E2F1AB3EA3C00400CF9 /* Images.xcassets */,
 				58E39E311AB3EA3C00400CF9 /* LaunchScreen.xib */,
@@ -209,6 +227,7 @@
 			files = (
 				58E39E2E1AB3EA3C00400CF9 /* Main.storyboard in Resources */,
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
+				581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,8 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E39E561AB438BD00400CF9 /* Trip.m in Sources */,
 				58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */,
 				58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */,
+				58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */,
+				581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */,
 				58E39E251AB3EA3C00400CF9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +442,7 @@
 				58E39E441AB3EA3C00400CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58E39E451AB3EA3C00400CF9 /* Build configuration list for PBXNativeTarget "CO2GOTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +451,7 @@
 				58E39E471AB3EA3C00400CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
