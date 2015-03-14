@@ -26,7 +26,7 @@
         Trip *trip = [[Trip alloc] init];
         trip.co2 = arc4random_uniform(500);
         trip.distance = arc4random_uniform(50);
-        trip.date = [[NSString alloc] initWithFormat:@"November %i", i];
+        trip.date = [[NSDate date] init];
         trip.transitType = @"Car";
         [self.trips addObject:trip];
     }
@@ -54,8 +54,10 @@
     static NSString *pastStatisticsTableIdentifier = @"StatisticsTableCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pastStatisticsTableIdentifier forIndexPath:indexPath];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         
-    cell.textLabel.text = ((Trip *)[self.trips objectAtIndex:indexPath.row]).date;
+    cell.textLabel.text = [formatter stringFromDate:((Trip *)[self.trips objectAtIndex:indexPath.row]).date];
     return cell;
 }
 

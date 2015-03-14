@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Trip.h"
+#import "StatisticsTableViewController.h"
+#import "SearchViewController.h"
 
 @interface ViewController ()
 
@@ -21,10 +23,31 @@
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
 @property (strong, nonatomic) Trip *trip;
+@property (weak, nonatomic) IBOutlet UIButton *viewStatsButton;
+@property (weak, nonatomic) IBOutlet UIButton *vehicleButton;
+
 
 @end
 
 @implementation ViewController
+- (IBAction)statButtonPressed:(id)sender {
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
+    UIViewController *initialViewController = [secondStoryBoard instantiateInitialViewController];
+    [self.navigationController pushViewController:initialViewController animated:YES];
+}
+
+- (IBAction)vehicleButtonPressed:(id)sender {
+    SearchViewController *searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
+    [self.navigationController pushViewController:searchViewController animated:YES];
+    
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"StatisticsTableSegue"]) {
+        NSLog(@"in prepare for segue");
+    }
+    
+}
 
 - (IBAction)trackButtonPressed:(id)sender {
     if (!self.track_button.selected) {
