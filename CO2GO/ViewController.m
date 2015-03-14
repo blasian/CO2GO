@@ -18,6 +18,7 @@
 @property (strong, nonatomic) MKMapView *map;
 @property (strong, nonatomic) CLLocation* origin;
 @property (nonatomic) CLLocationDistance distance;
+@property (weak, nonatomic) IBOutlet UILabel *distance_label;
 
 
 @end
@@ -26,17 +27,18 @@
 
 - (IBAction)startTracking:(id)sender {
     if (!self.track_button.selected) {
+        self.origin = self.location;
         [self.clm startUpdatingLocation];
         [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
         [self.map setShowsUserLocation:YES];
         self.origin = self.location;
-        self.distance = [self.origin distanceFromLocation:self.location];
         self.track_button.selected = YES;
-        
     } else {
         [self.clm stopUpdatingLocation];
         [self.map setShowsUserLocation:NO];
         self.track_button.selected = NO;
+        self.distance = [self.origin distanceFromLocation:self.location];
+        [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
     }
 }
 

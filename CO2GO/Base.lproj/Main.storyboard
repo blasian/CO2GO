@@ -29,7 +29,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="491"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
                                 <rect key="frame" x="204" y="540" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,14 +44,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bMf-LV-NpY" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="11" id="1yF-W4-HWf"/>
                             <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="3oz-Gc-RDv"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4g7-BO-YQA"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5e5-4b-EvA"/>
+                            <constraint firstItem="2LE-OQ-byh" firstAttribute="top" secondItem="pRI-OJ-9TH" secondAttribute="bottom" constant="8" symbolic="YES" id="9lL-NV-ZyD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="MXN-rT-2Jl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="bPc-sJ-jAm"/>
-                            <constraint firstAttribute="centerX" secondItem="bMf-LV-NpY" secondAttribute="centerX" id="f30-KX-bvw"/>
+                            <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="pMx-Zf-KkJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="distance_label" destination="E07-aC-Yme" id="oJ9-br-f6U"/>
                         <outlet property="speed_label" destination="bMf-LV-NpY" id="cAP-tk-2Rb"/>
                         <outlet property="track_button" destination="2LE-OQ-byh" id="yfM-oB-8uA"/>
                     </connections>
