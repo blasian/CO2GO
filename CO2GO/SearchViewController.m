@@ -58,6 +58,8 @@
     NSError *e = nil;
     NSDictionary *jsonCarList = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
     NSLog(@"%@",jsonCarList);
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
     for (int i = 0; i < [brandArray count]; i++) {
         NSString *brand = [brandArray objectAtIndex:i];
         NSArray *jsonObjects = [jsonCarList objectForKey: brand];
@@ -65,7 +67,7 @@
             Car *car = [[Car alloc] init];
             car.brand = brand;
             car.model = [value objectForKey:@"Model"];
-            car.emissions = [value objectForKey:@"AVG(CO2_gkm)"];
+            car.emissions = [f numberFromString:[value objectForKey:@"AVG(CO2_gkm)"]];
             [carArray addObject:car];
         }
     }
