@@ -72,6 +72,13 @@
     [self.map setShowsUserLocation:NO];
     self.track_button.selected = NO;
     self.trip.distance = self.distance;
+    self.trip = [[Trip alloc] init];
+    NSTimeInterval elapsedTime = [self.trip.date timeIntervalSinceNow];
+    int driving = [[self.travelLog objectAtIndex:0] intValue];
+    int walking = [[self.travelLog objectAtIndex:1] intValue];
+    double fraction = driving/(walking + driving);
+    double totalDrive = (fraction * self.distance)/1000;
+    // MUTLITPLY TOTALDRIVE BY CAR EFFICIENCY!!!!!!!!!
 }
 
 - (IBAction)vehicleTypeSelected:(id)sender {
@@ -89,7 +96,9 @@
     self.location = self.clm.location;
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
-
+    self.travelLog = [[NSMutableArray alloc] init];
+    [self.travelLog insertObject:0 atIndex:0];
+    [self.travelLog insertObject:0 atIndex:1];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -98,6 +107,15 @@
     self.distance = [self.origin distanceFromLocation:self.location] / 1000;
     [self.speed_label setText:[NSString stringWithFormat:@"%f", self.speed]];
     [self.distance_label setText: [NSString stringWithFormat:@"%d", (int) self.distance]];
+    if (self.speed > 7.5){
+        int integer = [[self.travelLog objectAtIndex:0] intValue];
+        NSNumber *value = [NSNumber numberWithInt:integer + 1];
+        [self.travelLog replaceObjectAtIndex:0 withObject:value];
+    } else {
+        int integer = [[self.travelLog objectAtIndex:1] intValue];
+        NSNumber *value = [NSNumber numberWithInt:integer+1];
+        [self.travelLog replaceObjectAtIndex:1 withObject:value];
+    }
 }
 
 

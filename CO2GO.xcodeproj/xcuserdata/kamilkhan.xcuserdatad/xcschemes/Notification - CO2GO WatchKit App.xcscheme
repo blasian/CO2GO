@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0620"
+   version = "2.0">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+               BuildableName = "CO2GO WatchKit App.app"
+               BlueprintName = "CO2GO WatchKit App"
+               ReferencedContainer = "container:CO2GO.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "56A2C3191AB50C7C00FA86D3"
+               BuildableName = "CO2GO WatchKit Extension.appex"
+               BlueprintName = "CO2GO WatchKit Extension"
+               ReferencedContainer = "container:CO2GO.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "58E39E1E1AB3EA3C00400CF9"
+               BuildableName = "CO2GO.app"
+               BlueprintName = "CO2GO"
+               ReferencedContainer = "container:CO2GO.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+            BuildableName = "CO2GO WatchKit App.app"
+            BlueprintName = "CO2GO WatchKit App"
+            ReferencedContainer = "container:CO2GO.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "8">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/CO2GO">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+            BuildableName = "CO2GO WatchKit App.app"
+            BlueprintName = "CO2GO WatchKit App"
+            ReferencedContainer = "container:CO2GO.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+            BuildableName = "CO2GO WatchKit App.app"
+            BlueprintName = "CO2GO WatchKit App"
+            ReferencedContainer = "container:CO2GO.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/CO2GO">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+            BuildableName = "CO2GO WatchKit App.app"
+            BlueprintName = "CO2GO WatchKit App"
+            ReferencedContainer = "container:CO2GO.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "56A2C3281AB50C7C00FA86D3"
+            BuildableName = "CO2GO WatchKit App.app"
+            BlueprintName = "CO2GO WatchKit App"
+            ReferencedContainer = "container:CO2GO.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
