@@ -85,6 +85,7 @@ lastLocation;
     double emissions = totalDrive * avgEmissions;
     self.lastTrip.emissions = emissions;
     self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow];
+    self.lastTrip.vehicle = self.car.brand;
     [[StatStore sharedStore] addStat:self.lastTrip];
 }
 
@@ -108,6 +109,10 @@ lastLocation;
     NSNumber *zero = [NSNumber numberWithInt:0];
     [self.travelLog insertObject:zero atIndex:0];
     [self.travelLog insertObject:zero atIndex:1];
+    self.car = [[Car alloc] init];
+    self.car.brand = @"AUDI";
+    self.car.emissions = [NSNumber numberWithInt:162];
+    self.car.model = @"A1";
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
