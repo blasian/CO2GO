@@ -21,6 +21,7 @@
 		58E39E3F1AB3EA3C00400CF9 /* CO2GOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E3E1AB3EA3C00400CF9 /* CO2GOTests.m */; };
 		58E39E561AB438BD00400CF9 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E521AB438BD00400CF9 /* Trip.m */; };
 		58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */; };
+		58E548731AB5B55500C2F91F /* DetailStatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E548721AB5B55500C2F91F /* DetailStatViewController.m */; };
 		58EA59551AB509D7007CB03F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59541AB509D7007CB03F /* MapKit.framework */; };
 		58EA59571AB50DEA007CB03F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59561AB50DEA007CB03F /* CoreData.framework */; };
 		58EA595C1AB511CD007CB03F /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EA595B1AB511CD007CB03F /* cars.json */; };
@@ -64,6 +65,8 @@
 		58E39E531AB438BD00400CF9 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
 		58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTableViewController.m; sourceTree = "<group>"; };
 		58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTableViewController.h; sourceTree = "<group>"; };
+		58E548711AB5B55500C2F91F /* DetailStatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailStatViewController.h; sourceTree = "<group>"; };
+		58E548721AB5B55500C2F91F /* DetailStatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailStatViewController.m; sourceTree = "<group>"; };
 		58EA59541AB509D7007CB03F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		58EA59561AB50DEA007CB03F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		58EA595B1AB511CD007CB03F /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
@@ -134,9 +137,9 @@
 				58E39E531AB438BD00400CF9 /* Trip.h */,
 				58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */,
 				58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */,
+				56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */,
 				58EA59921AB58F58007CB03F /* StatStore.h */,
 				58EA59931AB58F58007CB03F /* StatStore.m */,
-				56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */,
 				58E39E2C1AB3EA3C00400CF9 /* Main.storyboard */,
 				58E39E2F1AB3EA3C00400CF9 /* Images.xcassets */,
 				58E39E311AB3EA3C00400CF9 /* LaunchScreen.xib */,
@@ -144,6 +147,8 @@
 				58E39E221AB3EA3C00400CF9 /* Supporting Files */,
 				58EA59851AB5357F007CB03F /* Cars.h */,
 				58EA59861AB5357F007CB03F /* Cars.m */,
+				58E548711AB5B55500C2F91F /* DetailStatViewController.h */,
+				58E548721AB5B55500C2F91F /* DetailStatViewController.m */,
 			);
 			path = CO2GO;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56AC1B751AB574B900F7177C /* Car.m in Sources */,
+				58E548731AB5B55500C2F91F /* DetailStatViewController.m in Sources */,
 				58E39E561AB438BD00400CF9 /* Trip.m in Sources */,
 				58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */,
 				58EA59871AB5357F007CB03F /* Cars.m in Sources */,

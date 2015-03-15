@@ -7,6 +7,7 @@
 //
 
 #import "StatisticsTableViewController.h"
+#import "DetailStatViewController.h"
 #import "Trip.h"
 #import "StatStore.h"
 
@@ -45,6 +46,17 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@", ((Trip*)[[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row]).date];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Trip *trip = [[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row];
+    DetailStatViewController *tripVC = [[DetailStatViewController alloc] init];
+    tripVC.trip = trip;
+    [self.navigationController pushViewController:tripVC animated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
 }
 
 

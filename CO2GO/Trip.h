@@ -14,7 +14,7 @@
 @property double emissions;
 @property (nonatomic) CLLocationDistance distance;
 @property (nonatomic) NSDate *date;
-@property (nonatomic) NSString *transitType;
+@property (nonatomic) NSString *vehicle;
 @property (nonatomic) NSTimeInterval timeElapsed;
 
 @end
