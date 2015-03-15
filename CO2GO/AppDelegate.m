@@ -22,7 +22,7 @@
     NSData *jsondata = [NSData dataWithContentsOfURL: file];
     NSError *e = nil;
     
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    NSArray *data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
     
     [[Cars alloc] initWith: data];
     

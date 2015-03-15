@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"%@", [Cars sharedData]);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -47,6 +47,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Car" forIndexPath:indexPath];
     
     // Configure the cell...
+    NSDictionary *data = [Cars sharedData];
+    NSArray* car = [data objectForKey:@"ABARTH"];
+    [cell.textLabel setText:car[0]];
     
     return cell;
 }
