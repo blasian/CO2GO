@@ -8,6 +8,7 @@
 
 #import "StatisticsTableViewController.h"
 #import "Trip.h"
+#import "StatStore.h"
 
 @interface StatisticsTableViewController ()
 
@@ -17,19 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.trips = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < 30; i++) {
-        Trip *trip = [[Trip alloc] init];
-        trip.co2 = arc4random_uniform(500);
-        trip.distance = arc4random_uniform(50);
-        trip.date = [[NSDate date] init];
-        trip.transitType = @"Car";
-        [self.trips addObject:trip];
-    }
 
 }
 
@@ -46,7 +34,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.trips count];
+    return [[[StatStore sharedStore] allStats] count];
 }
 
 
@@ -54,12 +42,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTableCell"];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeZone:[NSTimeZone defaultTimeZone]];
-    
-    cell.textLabel.text = [formatter stringFromDate:((Trip *)[self.trips objectAtIndex:indexPath.row]).date];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", ((Trip*)[[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row]).date];
     return cell;
 }
 

@@ -18,5 +18,6 @@
 @property (nonatomic) NSMutableArray *travelLog;
 @property (nonatomic) Car *car;
 
+
 @end
 

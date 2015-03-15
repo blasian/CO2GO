@@ -10,7 +10,7 @@
 #import "Trip.h"
 #import "StatisticsTableViewController.h"
 #import "SearchViewController.h"
-#import "AppDelegate.h"
+#import "StatStore.h"
 
 @interface ViewController ()
 
@@ -23,7 +23,6 @@
 @property (strong, nonatomic) CLLocation* origin;
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
-@property (strong, nonatomic) Trip *trip;
 @property (weak, nonatomic) IBOutlet UIButton *viewStatsButton;
 @property (weak, nonatomic) IBOutlet UIButton *vehicleButton;
 @property (weak, nonatomic) IBOutlet UILabel *carLabel;
@@ -66,22 +65,24 @@
     [self.map setShowsUserLocation:YES];
     self.track_button.selected = YES;
     [self.clm startUpdatingLocation];
-    self.trip = [[Trip alloc] init];
-    self.trip.date = [NSDate date];
+    self.lastTrip = [[Trip alloc] init];
+    self.lastTrip.date = [NSDate date];
 }
 
 - (void)stopTracking {
     [self.clm stopUpdatingLocation];
     [self.map setShowsUserLocation:NO];
     self.track_button.selected = NO;
-    self.trip.distance = self.distance;
-    self.trip = [[Trip alloc] init];
-    NSTimeInterval elapsedTime = [self.trip.date timeIntervalSinceNow];
+    self.lastTrip.distance = self.distance;
     int driving = [[self.travelLog objectAtIndex:0] intValue];
     int walking = [[self.travelLog objectAtIndex:1] intValue];
     double fraction = driving/(walking + driving);
     double totalDrive = (fraction * self.distance)/1000;
-    // MUTLITPLY TOTALDRIVE BY CAR EFFICIENCY!!!!!!!!!
+    double avgEmissions = [self.car.emissions doubleValue];
+    double emissions = totalDrive * avgEmissions;
+    self.lastTrip.emissions = emissions;
+    self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow];
+    [[StatStore sharedStore] addStat:self.lastTrip];
 }
 
 - (IBAction)vehicleTypeSelected:(id)sender {
@@ -110,7 +111,7 @@
     self.speed = self.location.speed * 3.6;
     self.distance = [self.origin distanceFromLocation:self.location] / 1000;
     [self.speed_label setText:[NSString stringWithFormat:@"%f", self.speed]];
-    [self.distance_label setText: [NSString stringWithFormat:@"%d", (int) self.distance]];
+    [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
     if (self.speed > 7.5){
         int integer = [[self.travelLog objectAtIndex:0] intValue];
         NSNumber *value = [NSNumber numberWithInt:integer + 1];
