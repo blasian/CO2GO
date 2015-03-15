@@ -10,11 +10,13 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "Trip.h"
+#import "Car.h"
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic) Trip *lastTrip;
 @property (nonatomic) NSMutableArray *travelLog;
+@property (nonatomic) Car *car;
 
 @end
 
