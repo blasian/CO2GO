@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *emissions_label;
 @property (weak, nonatomic) IBOutlet UILabel *vehicle_label;
 @property (weak, nonatomic) IBOutlet UILabel *interval_label;
+@property (weak, nonatomic) IBOutlet UILabel *tripCO2Avg;
+@property (weak, nonatomic) IBOutlet UILabel *historicalCO2Avg;
 
 @end
 
@@ -27,16 +29,28 @@
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     [self.date_label setText:[NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:self.trip.date]]];
-    [self.distance_label setText:[NSString stringWithFormat:@"%f", self.trip.distance]];
-    [self.emissions_label setText:[NSString stringWithFormat:@"%f", self.trip.emissions]];
+    [self.distance_label setText:[NSString stringWithFormat:@"%.02f", self.trip.distance]];
+    [self.emissions_label setText:[NSString stringWithFormat:@"%.02f", self.trip.emissions]];
     [self.vehicle_label setText:self.trip.vehicle];
     [self.interval_label setText:[NSString stringWithFormat:@"%f", self.trip.timeElapsed]];
     NSArray *allStats = [[StatStore sharedStore] allStats];
     double co = 0;
     double dist = 0;
-    for (Trip t in allStats) {
-        
+    for (Trip *t in allStats) {
+        co = co + t.emissions;
+        dist = dist + t.distance;
     }
+    double histAvg = co/dist;
+    double myAvg = self.trip.emissions/self.trip.distance;
+    
+    double diffAvg = myAvg - histAvg;
+    if (diffAvg <= 0) {
+        self.tripCO2Avg.textColor = [[UIColor alloc] initWithRed: 54./255 green: 190./255 blue:32./255 alpha:1];
+    } else {
+        self.tripCO2Avg.textColor = [[UIColor alloc] initWithRed:234/255 green:38/255 blue:24/255 alpha:1];
+    }
+    [self.tripCO2Avg setText:[NSString stringWithFormat:@"%.02f", myAvg]];
+    [self.historicalCO2Avg setText:[NSString stringWithFormat:@"%.02f", histAvg]];
 }
 
 - (void)didReceiveMemoryWarning {
