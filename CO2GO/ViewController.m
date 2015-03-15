@@ -97,8 +97,8 @@
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
     self.travelLog = [[NSMutableArray alloc] init];
-    [self.travelLog insertObject:0 atIndex:0];
-    [self.travelLog insertObject:0 atIndex:1];
+    //[self.travelLog insertObject:0 atIndex:0];
+    //[self.travelLog insertObject:0 atIndex:1];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

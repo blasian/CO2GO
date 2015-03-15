@@ -18,7 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     Cars *cars = [[Cars alloc] init];
-    NSData *jsondata = [NSData dataWithContentsOfFile: [NSBundle pathForResource:@"./cars.json" ofType:@".json" inDirectory:@"./CO2GO"]];
+    NSURL * bundle = [[NSBundle mainBundle] bundleURL];
+    NSURL * file = [NSURL URLWithString:@"./cars.json" relativeToURL:bundle];
+    NSData *jsondata = [NSData dataWithContentsOfURL: file];
     NSError *e = nil;
     cars.data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
     
