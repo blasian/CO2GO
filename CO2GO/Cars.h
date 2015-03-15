@@ -11,6 +11,6 @@
 @interface Cars : ViewController
 
 + (id) sharedData;
-@property (strong, nonatomic) NSDictionary *data;
+- (id)initWith:(NSDictionary*) dict ;
 
 @end

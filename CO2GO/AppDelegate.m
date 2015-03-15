@@ -17,12 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    Cars *cars = [[Cars alloc] init];
     NSURL * bundle = [[NSBundle mainBundle] bundleURL];
     NSURL * file = [NSURL URLWithString:@"./cars.json" relativeToURL:bundle];
     NSData *jsondata = [NSData dataWithContentsOfURL: file];
     NSError *e = nil;
-    cars.data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    
+    [[Cars alloc] initWith: data];
     
     // Override point for customization after application launch.
     return YES;

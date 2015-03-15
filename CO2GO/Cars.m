@@ -10,22 +10,24 @@
 
 @interface Cars ()
 
+@property (strong, nonatomic) NSDictionary *data;
+
 @end
 
 @implementation Cars
 
 + (id)sharedData {
-    static Cars *data = nil;
+    static NSDictionary *data = nil;
     @synchronized(self) {
         if (data == nil)
-            data = [[self alloc] init];
+            data = [[NSDictionary alloc] init];
     }
     return data;
 }
 
-- (id)init {
-    if (self = [super init]) {
-        NSLog(@"Default Property Value");
+- (id)initWith:(NSDictionary*) dict {
+    if ((self = [super init])) {
+        [self setData:dict];
     }
     return self;
 }
