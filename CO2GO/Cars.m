@@ -10,7 +10,7 @@
 
 @interface Cars ()
 
-@property (strong, nonatomic) NSDictionary *data;
+@property (strong, nonatomic) NSArray *data;
 
 @end
 
@@ -25,7 +25,7 @@
     return data;
 }
 
-- (id)initWith:(NSDictionary*) dict {
+- (id)initWith:(NSArray*) dict {
     if ((self = [super init])) {
         [self setData:dict];
     }

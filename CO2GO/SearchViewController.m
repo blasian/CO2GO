@@ -47,10 +47,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Car" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSDictionary *data = [Cars sharedData];
-    NSArray* car = [data objectForKey:@"ABARTH"];
-    [cell.textLabel setText:car[0]];
-    
+    NSArray *data = [Cars sharedData];
+    [cell.textLabel setText:[data objectAtIndex:indexPath.row]];
     return cell;
 }
 
