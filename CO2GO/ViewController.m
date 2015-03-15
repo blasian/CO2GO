@@ -124,9 +124,9 @@
     self.location = locations.lastObject;
     self.speed = self.location.speed * 3.6;
     self.distance = [self.origin distanceFromLocation:self.location] / 1000;
-    [self.speed_label setText:[NSString stringWithFormat:@"%f", self.speed]];
-    [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
-    [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f", self.tripEmissions]];
+    [self.speed_label setText:[NSString stringWithFormat:@"%f km/h", self.speed]];
+    [self.distance_label setText: [NSString stringWithFormat:@"%f km", self.distance]];
+    [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f g", self.tripEmissions]];
     [self.map setCenterCoordinate:self.map.userLocation.coordinate animated:YES];
     MKCoordinateRegion zoomRegion = [self.map regionThatFits:MKCoordinateRegionMakeWithDistance(_map.userLocation.coordinate, 800, 800)];
     [self.map setRegion:zoomRegion animated:YES];
