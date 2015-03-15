@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Trip.h"
-#import <Parse/Parse.h>
 #import "StatisticsTableViewController.h"
 #import "SearchViewController.h"
 
@@ -24,7 +23,6 @@
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
 @property (strong, nonatomic) Trip *trip;
-@property (strong, nonatomic) Parse *db;
 @property (weak, nonatomic) IBOutlet UIButton *viewStatsButton;
 @property (weak, nonatomic) IBOutlet UIButton *vehicleButton;
 

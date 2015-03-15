@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CyI-41-Mzg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CyI-41-Mzg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
-                                <rect key="frame" x="275" y="499" width="51" height="30"/>
+                                <rect key="frame" x="275" y="387" width="51" height="30"/>
                                 <state key="normal" title="TRACK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,35 +26,29 @@
                                     <action selector="trackButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MTD-hQ-ig4"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
-                                <rect key="frame" x="16" y="0.0" width="568" height="253"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="253" id="kFC-4f-am0"/>
-                                </constraints>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
-                                <rect key="frame" x="66" y="540" width="82.5" height="20.5"/>
+                                <rect key="frame" x="26" y="540" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
-                                <rect key="frame" x="478" y="540" width="55.5" height="20.5"/>
+                                <rect key="frame" x="518" y="540" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-PJ-o2t">
-                                <rect key="frame" x="277" y="368" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-PJ-o2t">
+                                <rect key="frame" x="277" y="481" width="49" height="30"/>
+                                <state key="normal" title="History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="statButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ww6-hd-HGW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-J3-YcB">
-                                <rect key="frame" x="258" y="430" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-J3-YcB">
+                                <rect key="frame" x="258" y="531" width="85" height="30"/>
                                 <state key="normal" title="Vehicle Type">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,25 +57,49 @@
                                     <action selector="vehicleTypeSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0fD-0Y-fmj"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="317"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="kFC-4f-am0"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bMf-LV-NpY" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="11" id="1yF-W4-HWf"/>
+                            <constraint firstItem="DIb-PJ-o2t" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="64" id="3lE-cf-6pB"/>
                             <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="3oz-Gc-RDv"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4g7-BO-YQA"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5e5-4b-EvA"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4ze-Qz-hGX"/>
+                            <constraint firstAttribute="centerX" secondItem="pRI-OJ-9TH" secondAttribute="centerX" id="5kc-0k-Zjj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="79D-kq-r9B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="10" id="Ez4-nU-81U"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E07-aC-Yme" secondAttribute="bottom" constant="39" id="Hot-RF-izb"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ier-Ob-JDa"/>
+                            <constraint firstItem="2LE-OQ-byh" firstAttribute="trailing" secondItem="DIb-PJ-o2t" secondAttribute="trailing" id="MHh-2S-rMi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="MXN-rT-2Jl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="bPc-sJ-jAm"/>
+                            <constraint firstAttribute="bottom" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="183" id="PTF-1u-Vvl"/>
+                            <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="QLl-O0-qL9"/>
+                            <constraint firstItem="2LE-OQ-byh" firstAttribute="centerX" secondItem="hgp-J3-YcB" secondAttribute="centerX" id="X7i-tw-fHt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="dnE-WN-cNM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" id="emS-Gn-mnN"/>
+                            <constraint firstItem="bMf-LV-NpY" firstAttribute="baseline" secondItem="E07-aC-Yme" secondAttribute="baseline" id="gDv-c9-MUn"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="jWS-P6-I2A"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="k2h-Yv-UC1"/>
+                            <constraint firstItem="hgp-J3-YcB" firstAttribute="bottom" secondItem="bMf-LV-NpY" secondAttribute="bottom" id="leA-AE-5bA"/>
                             <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="pMx-Zf-KkJ"/>
-                            <constraint firstItem="E07-aC-Yme" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="11" id="pwv-GQ-4kL"/>
                             <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zCe-6E-NmV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5e5-4b-EvA"/>
-                                <exclude reference="bPc-sJ-jAm"/>
+                                <exclude reference="4g7-BO-YQA"/>
+                                <exclude reference="5kc-0k-Zjj"/>
+                                <exclude reference="emS-Gn-mnN"/>
+                                <exclude reference="jWS-P6-I2A"/>
+                                <exclude reference="k2h-Yv-UC1"/>
+                                <exclude reference="zCe-6E-NmV"/>
+                                <exclude reference="pMx-Zf-KkJ"/>
+                                <exclude reference="79D-kq-r9B"/>
+                                <exclude reference="MXN-rT-2Jl"/>
                             </mask>
                         </variation>
                     </view>
