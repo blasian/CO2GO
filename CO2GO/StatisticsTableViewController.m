@@ -50,9 +50,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Trip *trip = [[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row];
-    DetailStatViewController *tripVC = [[DetailStatViewController alloc] init];
+    UIStoryboard *secondaryStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
+    DetailStatViewController *tripVC = [secondaryStoryBoard instantiateViewControllerWithIdentifier:@"DetailView"];
     tripVC.trip = trip;
     [self.navigationController pushViewController:tripVC animated:YES];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -21,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.date_label setText:[NSString stringWithFormat:@"%@", self.trip.date]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    [self.date_label setText:[NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:self.trip.date]]];
     [self.distance_label setText:[NSString stringWithFormat:@"%f", self.trip.distance]];
     [self.emissions_label setText:[NSString stringWithFormat:@"%f", self.trip.emissions]];
     //[self.vehicle_label setText:self.trip.vehicle];
