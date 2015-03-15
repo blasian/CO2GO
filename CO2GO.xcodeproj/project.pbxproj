@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */; };
+		56AC1B701AB55C2600F7177C /* CarTableViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC1B6F1AB55C2600F7177C /* CarTableViewStoryboard.storyboard */; };
+		56AC1B721AB55F8900F7177C /* Manufacturer.json in Resources */ = {isa = PBXBuildFile; fileRef = 56AC1B711AB55F8900F7177C /* Manufacturer.json */; };
+		56AC1B751AB574B900F7177C /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AC1B741AB574B900F7177C /* Car.m */; };
 		584CEF871AB5032000B0220F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584CEF861AB5032000B0220F /* CoreLocation.framework */; };
 		58E39E251AB3EA3C00400CF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E241AB3EA3C00400CF9 /* main.m */; };
 		58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E271AB3EA3C00400CF9 /* AppDelegate.m */; };
@@ -24,7 +27,6 @@
 		58EA595F1AB5139A007CB03F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		58EA59871AB5357F007CB03F /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA59861AB5357F007CB03F /* Cars.m */; };
 		58EA59901AB54222007CB03F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA598E1AB54222007CB03F /* SearchViewController.m */; };
-		58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EA598F1AB54222007CB03F /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsTableStoryboard.storyboard; sourceTree = "<group>"; };
+		56AC1B6F1AB55C2600F7177C /* CarTableViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarTableViewStoryboard.storyboard; sourceTree = "<group>"; };
+		56AC1B711AB55F8900F7177C /* Manufacturer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Manufacturer.json; sourceTree = "<group>"; };
+		56AC1B731AB574B900F7177C /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		56AC1B741AB574B900F7177C /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		584CEF861AB5032000B0220F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58E39E1F1AB3EA3C00400CF9 /* CO2GO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CO2GO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E39E231AB3EA3C00400CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +70,6 @@
 		58EA59861AB5357F007CB03F /* Cars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
 		58EA598D1AB54222007CB03F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		58EA598E1AB54222007CB03F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		58EA598F1AB54222007CB03F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +121,11 @@
 				58E39E271AB3EA3C00400CF9 /* AppDelegate.m */,
 				58E39E291AB3EA3C00400CF9 /* ViewController.h */,
 				58E39E2A1AB3EA3C00400CF9 /* ViewController.m */,
+				56AC1B731AB574B900F7177C /* Car.h */,
+				56AC1B741AB574B900F7177C /* Car.m */,
 				58EA598D1AB54222007CB03F /* SearchViewController.h */,
 				58EA598E1AB54222007CB03F /* SearchViewController.m */,
-				58EA598F1AB54222007CB03F /* SearchViewController.xib */,
+				56AC1B6F1AB55C2600F7177C /* CarTableViewStoryboard.storyboard */,
 				58E39E521AB438BD00400CF9 /* Trip.m */,
 				58EA595B1AB511CD007CB03F /* cars.json */,
 				58E39E531AB438BD00400CF9 /* Trip.h */,
@@ -128,6 +135,7 @@
 				58E39E2C1AB3EA3C00400CF9 /* Main.storyboard */,
 				58E39E2F1AB3EA3C00400CF9 /* Images.xcassets */,
 				58E39E311AB3EA3C00400CF9 /* LaunchScreen.xib */,
+				56AC1B711AB55F8900F7177C /* Manufacturer.json */,
 				58E39E221AB3EA3C00400CF9 /* Supporting Files */,
 				58EA59851AB5357F007CB03F /* Cars.h */,
 				58EA59861AB5357F007CB03F /* Cars.m */,
@@ -243,9 +251,10 @@
 			files = (
 				58E39E2E1AB3EA3C00400CF9 /* Main.storyboard in Resources */,
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
-				58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
+				56AC1B721AB55F8900F7177C /* Manufacturer.json in Resources */,
 				58EA595C1AB511CD007CB03F /* cars.json in Resources */,
+				56AC1B701AB55C2600F7177C /* CarTableViewStoryboard.storyboard in Resources */,
 				56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AC1B751AB574B900F7177C /* Car.m in Sources */,
 				58E39E561AB438BD00400CF9 /* Trip.m in Sources */,
 				58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */,
 				58EA59871AB5357F007CB03F /* Cars.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UITableViewController <UITableViewDelegate>
+@interface SearchViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
 
 @end

@@ -10,22 +10,31 @@
 
 @interface Cars ()
 
-@property (strong, nonatomic) NSArray *data;
-
 @end
 
+
 @implementation Cars
+@synthesize data;
 
 + (id)sharedData {
-    static NSDictionary *data = nil;
-    @synchronized(self) {
-        if (data == nil)
-            data = [[NSDictionary alloc] init];
-    }
-    return data;
+    Cars *car = [[self alloc] initPrivate];
+    return car;
 }
 
-- (id)initWith:(NSArray*) dict {
+- (instancetype)initPrivate {
+    self = [super init];
+    if (self) {
+        NSURL * bundle = [[NSBundle mainBundle] bundleURL];
+        NSURL * file = [NSURL URLWithString:@"./cars.json" relativeToURL:bundle];
+        NSData *jsondata = [NSData dataWithContentsOfURL: file];
+        NSError *e = nil;
+        Cars *car = [[Cars alloc] init];
+        car.data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    }
+    return self;
+}
+
+- (id)initWith:(NSDictionary*) dict {
     if ((self = [super init])) {
         [self setData:dict];
     }

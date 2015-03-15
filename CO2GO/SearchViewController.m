@@ -8,21 +8,66 @@
 
 #import "SearchViewController.h"
 #import "Cars.h"
+#import "Car.h"
 
 @interface SearchViewController ()
 
 @end
 
 @implementation SearchViewController
+{
+    NSArray *brandArray;
+    NSMutableArray *carArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", [Cars sharedData]);
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    carArray = [[NSMutableArray alloc] init];
+    brandArray = [[NSArray alloc] initWithObjects:@"ABARTH",
+     @"ALFA ROMEO",
+     @"AUDI",
+     @"BMW",
+     @"CHRYSLER JEEP",
+     @"CITROEN",
+     @"FERRARI",
+     @"FIAT",
+     @"FORD",
+     @"JAGUAR",
+     @"LEXUS",
+     @"MAZDA",
+     @"MERCEDES-BENZ",
+     @"MINI",
+     @"MITSUBISHI",
+     @"NISSAN",
+     @"PEUGEOT",
+     @"PORSCHE",
+     @"ROLLS ROYCE",
+     @"SKODA", 
+     @"SUBARU", 
+     @"SUZUKI", 
+     @"VAUXHALL", 
+     @"VOLKSWAGEN", 
+     @"VOLVO", nil];
+    NSLog(@"View Did Load data %@", [Cars sharedData]);
+    NSLog(@"%@",[[Cars sharedData] data]);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSURL * bundle = [[NSBundle mainBundle] bundleURL];
+    NSURL * file = [NSURL URLWithString:@"./cars.json" relativeToURL:bundle];
+    NSData *jsondata = [NSData dataWithContentsOfURL: file];
+    NSError *e = nil;
+    NSDictionary *jsonCarList = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    NSLog(@"%@",jsonCarList);
+    for (int i = 0; i < [brandArray count]; i++) {
+        NSString *brand = [brandArray objectAtIndex:i];
+        NSArray *jsonObjects = [jsonCarList objectForKey: brand];
+        for (NSDictionary *value in jsonObjects) {
+            Car *car = [[Car alloc] init];
+            car.brand = brand;
+            car.model = [value objectForKey:@"Model"];
+            car.emissions = [value objectForKey:@"AVG(CO2_gkm"];
+            [carArray addObject:car];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [[Cars sharedData] count];
+    return [carArray count];
 }
 
 
@@ -47,9 +92,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Car" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSArray *data = [Cars sharedData];
-    [cell.textLabel setText:[data objectAtIndex:indexPath.row]];
-    return cell;
+    NSString *brand = ((Car *)[carArray objectAtIndex:indexPath.row]).brand;
+    NSString *model = ((Car *)[carArray objectAtIndex:indexPath.row]).model;
+    NSString *text = [NSString stringWithFormat:@"%@: %@", brand, model];
+    [cell.textLabel setText:text];
+     return cell;
 }
 
 

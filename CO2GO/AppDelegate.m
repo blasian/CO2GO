@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.m
 //  CO2GO
@@ -17,15 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSURL * bundle = [[NSBundle mainBundle] bundleURL];
-    NSURL * file = [NSURL URLWithString:@"./cars.json" relativeToURL:bundle];
-    NSData *jsondata = [NSData dataWithContentsOfURL: file];
-    NSError *e = nil;
-    
-    NSArray *data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
-    
-    [[Cars alloc] initWith: data];
-    
     // Override point for customization after application launch.
     return YES;
 }

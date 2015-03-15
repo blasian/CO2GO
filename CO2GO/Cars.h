@@ -12,5 +12,7 @@
 
 + (id) sharedData;
 - (id)initWith:(NSDictionary*) dict ;
+@property (strong, nonatomic) NSDictionary *data;
+
 
 @end
