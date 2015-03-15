@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *carLabel;
 @property (nonatomic) double tripEmissions;
 @property (weak, nonatomic) IBOutlet UILabel *tripEmissionsLabel;
+@property (nonatomic) CLLocation *
+lastLocation;
 
 @end
 
@@ -69,6 +71,7 @@
     self.lastTrip = [[Trip alloc] init];
     self.lastTrip.date = [NSDate date];
     self.tripEmissions = 0;
+    self.lastLocation = 0;
 }
 
 - (void)stopTracking {
@@ -109,6 +112,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.lastLocation = self.location;
     int driving = [[self.travelLog objectAtIndex:0] intValue];
     int walking = [[self.travelLog objectAtIndex:1] intValue];
     double fraction;
@@ -120,10 +124,10 @@
     double totalDrive = (fraction * self.distance)/1000;
     double avgEmissions = [self.car.emissions doubleValue];
     double emissions = totalDrive * avgEmissions;
-    self.tripEmissions = emissions;
+    self.tripEmissions = self.tripEmissions + emissions;
     self.location = locations.lastObject;
     self.speed = self.location.speed * 3.6;
-    self.distance = [self.origin distanceFromLocation:self.location] / 1000;
+    self.distance = self.distance + [self.lastLocation distanceFromLocation:self.location] / 1000;
     [self.speed_label setText:[NSString stringWithFormat:@"%f km/h", self.speed]];
     [self.distance_label setText: [NSString stringWithFormat:@"%f km", self.distance]];
     [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f g", self.tripEmissions]];
