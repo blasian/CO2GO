@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CO2GO-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,38 +17,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
-                                <rect key="frame" x="275" y="387" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
+                                <rect key="frame" x="235" y="389" width="130" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.16320245589999999" green="0.7222024937" blue="0.0037068669810000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="TRACK">
+                                    <color key="titleColor" red="0.16320245586040869" green="0.72220249368686873" blue="0.003706866980687716" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="trackButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MTD-hQ-ig4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
-                                <rect key="frame" x="26" y="540" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-aC-Yme">
+                                <rect key="frame" x="196" y="455" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
-                                <rect key="frame" x="518" y="540" width="56" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="381"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance Travelled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnn-JL-3vx">
+                                <rect key="frame" x="31" y="455" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-PJ-o2t">
-                                <rect key="frame" x="277" y="481" width="49" height="30"/>
-                                <state key="normal" title="History">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="statButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ww6-hd-HGW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-J3-YcB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffF-kZ-JOp">
+                                <rect key="frame" x="54" y="504" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
+                                <rect key="frame" x="196" y="510" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnn-JL-3vx" firstAttribute="centerY" secondItem="E07-aC-Yme" secondAttribute="centerY" id="7gk-ND-amC"/>
+                            <constraint firstItem="gnn-JL-3vx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="9dO-Oi-E4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E07-aC-Yme" secondAttribute="trailing" constant="30" id="Iyq-c5-vh4"/>
+                            <constraint firstItem="ffF-kZ-JOp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="JaJ-cg-fvY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ffF-kZ-JOp" secondAttribute="bottom" constant="50" id="VzL-jM-Emk"/>
+                            <constraint firstItem="2LE-OQ-byh" firstAttribute="top" secondItem="pRI-OJ-9TH" secondAttribute="bottom" constant="30" id="awE-Nn-wmF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="30" id="qET-q8-ePw"/>
+                            <constraint firstItem="ffF-kZ-JOp" firstAttribute="top" secondItem="gnn-JL-3vx" secondAttribute="bottom" constant="30" id="s6j-8s-jpb"/>
+                            <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="tQC-wF-NbR"/>
+                            <constraint firstItem="bMf-LV-NpY" firstAttribute="centerY" secondItem="ffF-kZ-JOp" secondAttribute="centerY" constant="6" id="upO-0b-wBh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CO2GO" id="uXM-5g-1Fl">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="wg2-iC-XWN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hgp-J3-YcB">
                                 <rect key="frame" x="258" y="531" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Vehicle Type">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,61 +84,21 @@
                                     <action selector="vehicleTypeSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0fD-0Y-fmj"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
-                                <rect key="frame" x="0.0" y="64" width="600" height="317"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="317" id="kFC-4f-am0"/>
-                                </constraints>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8H-cx-Sk9">
-                                <rect key="frame" x="57" y="443" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DIb-PJ-o2t" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="64" id="3lE-cf-6pB"/>
-                            <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="3oz-Gc-RDv"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4g7-BO-YQA"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4ze-Qz-hGX"/>
-                            <constraint firstAttribute="centerX" secondItem="pRI-OJ-9TH" secondAttribute="centerX" id="5kc-0k-Zjj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="79D-kq-r9B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="10" id="Ez4-nU-81U"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="E07-aC-Yme" secondAttribute="bottom" constant="39" id="Hot-RF-izb"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ier-Ob-JDa"/>
-                            <constraint firstItem="2LE-OQ-byh" firstAttribute="trailing" secondItem="DIb-PJ-o2t" secondAttribute="trailing" id="MHh-2S-rMi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="50" id="MXN-rT-2Jl"/>
-                            <constraint firstAttribute="bottom" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="183" id="PTF-1u-Vvl"/>
-                            <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="QLl-O0-qL9"/>
-                            <constraint firstItem="2LE-OQ-byh" firstAttribute="centerX" secondItem="hgp-J3-YcB" secondAttribute="centerX" id="X7i-tw-fHt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="dnE-WN-cNM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" id="emS-Gn-mnN"/>
-                            <constraint firstItem="bMf-LV-NpY" firstAttribute="baseline" secondItem="E07-aC-Yme" secondAttribute="baseline" id="gDv-c9-MUn"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="jWS-P6-I2A"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="k2h-Yv-UC1"/>
-                            <constraint firstItem="hgp-J3-YcB" firstAttribute="bottom" secondItem="bMf-LV-NpY" secondAttribute="bottom" id="leA-AE-5bA"/>
-                            <constraint firstItem="E07-aC-Yme" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="pMx-Zf-KkJ"/>
-                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zCe-6E-NmV"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4g7-BO-YQA"/>
-                                <exclude reference="5kc-0k-Zjj"/>
-                                <exclude reference="emS-Gn-mnN"/>
-                                <exclude reference="jWS-P6-I2A"/>
-                                <exclude reference="k2h-Yv-UC1"/>
-                                <exclude reference="zCe-6E-NmV"/>
-                                <exclude reference="pMx-Zf-KkJ"/>
-                                <exclude reference="79D-kq-r9B"/>
-                                <exclude reference="MXN-rT-2Jl"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="uXM-5g-1Fl"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZXU-Lt-PBB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DIb-PJ-o2t">
+                                <rect key="frame" x="277" y="481" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="History">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="statButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ww6-hd-HGW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="carLabel" destination="g8H-cx-Sk9" id="bEb-gP-nla"/>
                         <outlet property="distance_label" destination="E07-aC-Yme" id="oJ9-br-f6U"/>
                         <outlet property="speed_label" destination="bMf-LV-NpY" id="cAP-tk-2Rb"/>
                         <outlet property="track_button" destination="2LE-OQ-byh" id="yfM-oB-8uA"/>
