@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */; };
-		581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 581A52071AB4BC2C00254F29 /* SearchViewController.m */; };
-		581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581A52081AB4BC2C00254F29 /* SearchViewController.xib */; };
 		584CEF871AB5032000B0220F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584CEF861AB5032000B0220F /* CoreLocation.framework */; };
 		58E39E251AB3EA3C00400CF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E241AB3EA3C00400CF9 /* main.m */; };
 		58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E271AB3EA3C00400CF9 /* AppDelegate.m */; };
@@ -23,6 +21,10 @@
 		58EA59551AB509D7007CB03F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59541AB509D7007CB03F /* MapKit.framework */; };
 		58EA59571AB50DEA007CB03F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59561AB50DEA007CB03F /* CoreData.framework */; };
 		58EA595C1AB511CD007CB03F /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EA595B1AB511CD007CB03F /* cars.json */; };
+		58EA595F1AB5139A007CB03F /* cars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58EA595D1AB5139A007CB03F /* cars.xcdatamodeld */; };
+		58EA59871AB5357F007CB03F /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA59861AB5357F007CB03F /* Cars.m */; };
+		58EA59901AB54222007CB03F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA598E1AB54222007CB03F /* SearchViewController.m */; };
+		58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EA598F1AB54222007CB03F /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,6 @@
 
 /* Begin PBXFileReference section */
 		56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsTableStoryboard.storyboard; sourceTree = "<group>"; };
-		581A52061AB4BC2C00254F29 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		581A52071AB4BC2C00254F29 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		581A52081AB4BC2C00254F29 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		584CEF861AB5032000B0220F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58E39E1F1AB3EA3C00400CF9 /* CO2GO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CO2GO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E39E231AB3EA3C00400CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +60,12 @@
 		58EA59541AB509D7007CB03F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		58EA59561AB50DEA007CB03F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		58EA595B1AB511CD007CB03F /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
+		58EA595E1AB5139A007CB03F /* cars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cars.xcdatamodel; sourceTree = "<group>"; };
+		58EA59851AB5357F007CB03F /* Cars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cars.h; sourceTree = "<group>"; };
+		58EA59861AB5357F007CB03F /* Cars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
+		58EA598D1AB54222007CB03F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		58EA598E1AB54222007CB03F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		58EA598F1AB54222007CB03F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,19 +117,21 @@
 				58E39E271AB3EA3C00400CF9 /* AppDelegate.m */,
 				58E39E291AB3EA3C00400CF9 /* ViewController.h */,
 				58E39E2A1AB3EA3C00400CF9 /* ViewController.m */,
+				58EA598D1AB54222007CB03F /* SearchViewController.h */,
+				58EA598E1AB54222007CB03F /* SearchViewController.m */,
+				58EA598F1AB54222007CB03F /* SearchViewController.xib */,
 				58E39E521AB438BD00400CF9 /* Trip.m */,
 				58EA595B1AB511CD007CB03F /* cars.json */,
 				58E39E531AB438BD00400CF9 /* Trip.h */,
 				58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */,
 				58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */,
 				56525C441AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard */,
-				581A52061AB4BC2C00254F29 /* SearchViewController.h */,
-				581A52071AB4BC2C00254F29 /* SearchViewController.m */,
-				581A52081AB4BC2C00254F29 /* SearchViewController.xib */,
 				58E39E2C1AB3EA3C00400CF9 /* Main.storyboard */,
 				58E39E2F1AB3EA3C00400CF9 /* Images.xcassets */,
 				58E39E311AB3EA3C00400CF9 /* LaunchScreen.xib */,
 				58E39E221AB3EA3C00400CF9 /* Supporting Files */,
+				58EA59851AB5357F007CB03F /* Cars.h */,
+				58EA59861AB5357F007CB03F /* Cars.m */,
 			);
 			path = CO2GO;
 			sourceTree = "<group>";
@@ -237,7 +244,7 @@
 			files = (
 				58E39E2E1AB3EA3C00400CF9 /* Main.storyboard in Resources */,
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
-				581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */,
+				58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
 				58EA595C1AB511CD007CB03F /* cars.json in Resources */,
 				56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */,
@@ -260,9 +267,11 @@
 			files = (
 				58E39E561AB438BD00400CF9 /* Trip.m in Sources */,
 				58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */,
+				58EA59871AB5357F007CB03F /* Cars.m in Sources */,
+				58EA595F1AB5139A007CB03F /* cars.xcdatamodeld in Sources */,
 				58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */,
 				58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */,
-				581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */,
+				58EA59901AB54222007CB03F /* SearchViewController.m in Sources */,
 				58E39E251AB3EA3C00400CF9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
