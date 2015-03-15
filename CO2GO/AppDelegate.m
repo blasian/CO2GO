@@ -10,12 +10,18 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) NSDictionary *data;
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSData *jsondata = [NSData dataWithContentsOfFile: [NSBundle pathForResource:@"cars.json" ofType:@"json" inDirectory:@"/CO2GO"]];
+    NSError *e = nil;
+    self.data = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
+    
     // Override point for customization after application launch.
     return YES;
 }

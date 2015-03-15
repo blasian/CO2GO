@@ -21,6 +21,9 @@
 		58E39E561AB438BD00400CF9 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E521AB438BD00400CF9 /* Trip.m */; };
 		58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */; };
 		58EA59551AB509D7007CB03F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59541AB509D7007CB03F /* MapKit.framework */; };
+		58EA59571AB50DEA007CB03F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA59561AB50DEA007CB03F /* CoreData.framework */; };
+		58EA595C1AB511CD007CB03F /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EA595B1AB511CD007CB03F /* cars.json */; };
+		58EA595F1AB5139A007CB03F /* cars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58EA595D1AB5139A007CB03F /* cars.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTableViewController.m; sourceTree = "<group>"; };
 		58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTableViewController.h; sourceTree = "<group>"; };
 		58EA59541AB509D7007CB03F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		58EA59561AB50DEA007CB03F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		58EA595B1AB511CD007CB03F /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
+		58EA595E1AB5139A007CB03F /* cars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cars.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EA59571AB50DEA007CB03F /* CoreData.framework in Frameworks */,
 				58EA59551AB509D7007CB03F /* MapKit.framework in Frameworks */,
 				584CEF871AB5032000B0220F /* CoreLocation.framework in Frameworks */,
 			);
@@ -82,6 +89,7 @@
 		58E39E161AB3EA3C00400CF9 = {
 			isa = PBXGroup;
 			children = (
+				58EA59561AB50DEA007CB03F /* CoreData.framework */,
 				58EA59541AB509D7007CB03F /* MapKit.framework */,
 				584CEF861AB5032000B0220F /* CoreLocation.framework */,
 				58E39E211AB3EA3C00400CF9 /* CO2GO */,
@@ -107,6 +115,8 @@
 				58E39E291AB3EA3C00400CF9 /* ViewController.h */,
 				58E39E2A1AB3EA3C00400CF9 /* ViewController.m */,
 				58E39E521AB438BD00400CF9 /* Trip.m */,
+				58EA595B1AB511CD007CB03F /* cars.json */,
+				58EA595D1AB5139A007CB03F /* cars.xcdatamodeld */,
 				58E39E531AB438BD00400CF9 /* Trip.h */,
 				58E39E551AB438BD00400CF9 /* StatisticsTableViewController.h */,
 				58E39E541AB438BD00400CF9 /* StatisticsTableViewController.m */,
@@ -232,6 +242,7 @@
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
 				581A520A1AB4BC2C00254F29 /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
+				58EA595C1AB511CD007CB03F /* cars.json in Resources */,
 				56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +263,7 @@
 			files = (
 				58E39E561AB438BD00400CF9 /* Trip.m in Sources */,
 				58E39E2B1AB3EA3C00400CF9 /* ViewController.m in Sources */,
+				58EA595F1AB5139A007CB03F /* cars.xcdatamodeld in Sources */,
 				58E39E281AB3EA3C00400CF9 /* AppDelegate.m in Sources */,
 				58E39E571AB438BD00400CF9 /* StatisticsTableViewController.m in Sources */,
 				581A52091AB4BC2C00254F29 /* SearchViewController.m in Sources */,
@@ -469,6 +481,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		58EA595D1AB5139A007CB03F /* cars.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				58EA595E1AB5139A007CB03F /* cars.xcdatamodel */,
+			);
+			currentVersion = 58EA595E1AB5139A007CB03F /* cars.xcdatamodel */;
+			path = cars.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 58E39E171AB3EA3C00400CF9 /* Project object */;
 }

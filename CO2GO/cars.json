@@ -1,0 +1,655 @@
+{
+    "ABARTH":
+    [{
+     "Model": "500, 2012 onwards",
+     "AVG(CO2_gkm)": "152.5"}]
+    ,
+    
+    "ALFA ROMEO":
+    [
+     {
+     "Model": "Alfa 4 C, From April 2014",
+     "AVG(CO2_gkm)": "157"
+     },
+     {
+     "Model": "Giulietta",
+     "AVG(CO2_gkm)": "132.66666666666666"
+     },
+     {
+     "Model": "MiTo, 2012 onwards",
+     "AVG(CO2_gkm)": "115.66666666666667"
+     }
+     ]
+    ,
+    
+    "AUDI":[
+            {
+            "Model": "A1",
+            "AVG(CO2_gkm)": "162"
+            },
+            {
+            "Model": "A1 Sportback",
+            "AVG(CO2_gkm)": "166"
+            },
+            {
+            "Model": "A3 Cabriolet",
+            "AVG(CO2_gkm)": "127.14285714285714"
+            },
+            {
+            "Model": "A3 Hatchback",
+            "AVG(CO2_gkm)": "132.11111111111111"
+            },
+            {
+            "Model": "A3 Saloon",
+            "AVG(CO2_gkm)": "134"
+            },
+            {
+            "Model": "A3 Sportback",
+            "AVG(CO2_gkm)": "133.11111111111111"
+            },
+            {
+            "Model": "A4 Avant",
+            "AVG(CO2_gkm)": "146.33333333333334"
+            },
+            {
+            "Model": "A4 Saloon",
+            "AVG(CO2_gkm)": "109"
+            },
+            {
+            "Model": "A5 Cabriolet",
+            "AVG(CO2_gkm)": "153.5"
+            },
+            {
+            "Model": "A5 Coup",
+            "AVG(CO2_gkm)": "152"
+            },
+            {
+            "Model": "A5 Sportback",
+            "AVG(CO2_gkm)": "144.75"
+            },
+            {
+            "Model": "A6 Allroad",
+            "AVG(CO2_gkm)": "165"
+            },
+            {
+            "Model": "A6 Avant",
+            "AVG(CO2_gkm)": "119"
+            },
+            {
+            "Model": "A6 Saloon",
+            "AVG(CO2_gkm)": "115.5"
+            },
+            {
+            "Model": "A8",
+            "AVG(CO2_gkm)": "192.625"
+            },
+            {
+            "Model": "Q3",
+            "AVG(CO2_gkm)": "141"
+            },
+            {
+            "Model": "Q5",
+            "AVG(CO2_gkm)": "179"
+            }
+            ]
+    ,
+    
+    "BMW": [
+            {
+            "Model": "1 Series 3-door F21, From September 2012",
+            "AVG(CO2_gkm)": "133.30769230769232"
+            },
+            {
+            "Model": "1 Series 5-door F20, From September 2011",
+            "AVG(CO2_gkm)": "133.30769230769232"
+            },
+            {
+            "Model": "2 Series Coup F22, From March 2014",
+            "AVG(CO2_gkm)": "139.33333333333334"
+            },
+            {
+            "Model": "3 Series Gran Turismo F34, From June 2013",
+            "AVG(CO2_gkm)": "147.27450980392157"
+            },
+            {
+            "Model": "3 Series Saloon F30, From February 2012",
+            "AVG(CO2_gkm)": "138.2"
+            },
+            {
+            "Model": "3 Series Touring F31, from September 2012",
+            "AVG(CO2_gkm)": "143.26315789473685"
+            },
+            {
+            "Model": "4 Series Convertible F33, From March 2014",
+            "AVG(CO2_gkm)": "156.36363636363637"
+            },
+            {
+            "Model": "4 Series Coup F32, From October 2013",
+            "AVG(CO2_gkm)": "142.3015873015873"
+            },
+            {
+            "Model": "4 Series Gran Coup F36, From June 2014",
+            "AVG(CO2_gkm)": "141.54347826086956"
+            },
+            {
+            "Model": "5 Series F10/F11, From March 2010",
+            "AVG(CO2_gkm)": "145.49462365591398"
+            },
+            {
+            "Model": "5 Series Gran Turismo F07, From October 2009",
+            "AVG(CO2_gkm)": "171.4"
+            },
+            {
+            "Model": "6 Series F12/F13, March 2011",
+            "AVG(CO2_gkm)": "188"
+            },
+            {
+            "Model": "6 Series Gran Coup F06 , From June 2012",
+            "AVG(CO2_gkm)": "187.2"
+            },
+            {
+            "Model": "7 Series F01/F02",
+            "AVG(CO2_gkm)": "202.25"
+            },
+            {
+            "Model": "M3 Series Saloon F80, From June 2014",
+            "AVG(CO2_gkm)": "199"
+            },
+            {
+            "Model": "M4 Series Coup F82, From June 2014",
+            "AVG(CO2_gkm)": "199"
+            },
+            {
+            "Model": "X1 Series E84 , From October 2009",
+            "AVG(CO2_gkm)": "173.75"
+            },
+            {
+            "Model": "X3 Series F25, From November 2010",
+            "AVG(CO2_gkm)": "141.16"
+            },
+            {
+            "Model": "X4 Series F26, From July 2014",
+            "AVG(CO2_gkm)": "146.42857142857142"
+            },
+            {
+            "Model": "X5 Series F15, From November 2013",
+            "AVG(CO2_gkm)": "171.95"
+            },
+            {
+            "Model": "X6 Series E71",
+            "AVG(CO2_gkm)": "198"
+            },
+            {
+            "Model": "Z4 Series E89",
+            "AVG(CO2_gkm)": "177.22222222222223"
+            },
+            {
+            "Model": "i Series, From November 2013",
+            "AVG(CO2_gkm)": "20.666666666666668"
+            }
+            ]
+    ,
+    
+    "CHRYSLER JEEP": [
+                      {
+                      "Model": "Chrysler Ypsilon, MY 2013",
+                      "AVG(CO2_gkm)": "98"
+                      },
+                      {
+                      "Model": "Chrysler Ypsilon, MY 2014",
+                      "AVG(CO2_gkm)": "98"
+                      },
+                      {
+                      "Model": "Jeep Compass, MY 2013",
+                      "AVG(CO2_gkm)": "199"
+                      },
+                      {
+                      "Model": "Jeep Compass, MY 2014",
+                      "AVG(CO2_gkm)": "192"
+                      },
+                      {
+                      "Model": "Jeep Grand Cherokee, MY 2014",
+                      "AVG(CO2_gkm)": "327"
+                      },
+                      {
+                      "Model": "Jeep Wrangler , MY 2014",
+                      "AVG(CO2_gkm)": "264.7142857142857"
+                      },
+                      {
+                      "Model": "Jeep Wrangler, MY 2013",
+                      "AVG(CO2_gkm)": "230"
+                      }
+                      ]
+    ,
+    
+    "CITROEN":[
+               {
+               "Model": "C4",
+               "AVG(CO2_gkm)": "112"
+               },
+               {
+               "Model": "C4 Cactus",
+               "AVG(CO2_gkm)": "93.83333333333333"
+               },
+               {
+               "Model": "DS3",
+               "AVG(CO2_gkm)": "94"
+               },
+               {
+               "Model": "DS5",
+               "AVG(CO2_gkm)": "109.5"
+               },
+               {
+               "Model": "New C4 Picasso",
+               "AVG(CO2_gkm)": "111.5"
+               },
+               {
+               "Model": "New Grand C4 Picasso",
+               "AVG(CO2_gkm)": "115"
+               }
+               ]
+    ,
+    
+    "FERRARI": [
+                {
+                "Model": "All Models",
+                "AVG(CO2_gkm)": "262"
+                }
+                ]
+    ,
+    
+    "FIAT": [
+             {
+             "Model": "500 and 500C, 2012 onwards",
+             "AVG(CO2_gkm)": "100.8"
+             },
+             {
+             "Model": "500L MPW, August 2013 Onwards",
+             "AVG(CO2_gkm)": "128.5"
+             },
+             {
+             "Model": "500L, from 2013",
+             "AVG(CO2_gkm)": "136.8"
+             },
+             {
+             "Model": "Doblo, 2012 onwards",
+             "AVG(CO2_gkm)": "168"
+             },
+             {
+             "Model": "Panda, From February 2012",
+             "AVG(CO2_gkm)": "106.6"
+             },
+             {
+             "Model": "Punto, 2012 onwards",
+             "AVG(CO2_gkm)": "129"
+             }
+             ]
+    ,
+    
+    "FORD": [
+             {
+             "Model": "Ka, Model Year - Post 2014",
+             "AVG(CO2_gkm)": "115"
+             }
+             ]
+    ,
+    
+    "JAGUAR": [
+               {
+               "Model": "F-TYPE Coupe & Convertible, 15MY",
+               "AVG(CO2_gkm)": "205"
+               },
+               {
+               "Model": "F-TYPE V6 S Coupe & Convertible, 15MY",
+               "AVG(CO2_gkm)": "209"
+               },
+               {
+               "Model": "XF Saloon, 15MY",
+               "AVG(CO2_gkm)": "221"
+               }
+               ]
+    ,
+    
+    "LEXUS": [
+              {
+              "Model": "CT, MY2014",
+              "AVG(CO2_gkm)": "91.6"
+              }
+              ]
+    ,
+    
+    "MAZDA": [
+              {
+              "Model": "CX-5",
+              "AVG(CO2_gkm)": "136.33333333333334"
+              },
+              {
+              "Model": "Mazda3",
+              "AVG(CO2_gkm)": "112.66666666666667"
+              },
+              {
+              "Model": "Mazda6",
+              "AVG(CO2_gkm)": "120.75"
+              }
+              ]
+    ,
+    
+    "MERCEDES-BENZ": [
+                      {
+                      "Model": "A-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "133.91304347826087"
+                      },
+                      {
+                      "Model": "A-Class, Model Year 2015",
+                      "AVG(CO2_gkm)": "125.85714285714286"
+                      },
+                      {
+                      "Model": "B-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "134.66666666666666"
+                      },
+                      {
+                      "Model": "B-Class, Model Year 2015",
+                      "AVG(CO2_gkm)": "156"
+                      },
+                      {
+                      "Model": "C-Class Coup, Model Year 2014",
+                      "AVG(CO2_gkm)": "148"
+                      },
+                      {
+                      "Model": "C-Class Coup, Model Year 2015",
+                      "AVG(CO2_gkm)": "147"
+                      },
+                      {
+                      "Model": "C-Class Estate, Model Year 2014",
+                      "AVG(CO2_gkm)": "144.33333333333334"
+                      },
+                      {
+                      "Model": "C-Class Saloon, Model Year 2014",
+                      "AVG(CO2_gkm)": "141"
+                      },
+                      {
+                      "Model": "C-Class Saloon, Model Year 2015",
+                      "AVG(CO2_gkm)": "121.15384615384616"
+                      },
+                      {
+                      "Model": "CLA-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "132.22222222222223"
+                      },
+                      {
+                      "Model": "CLA-Class, Model Year 2015",
+                      "AVG(CO2_gkm)": "127.5"
+                      },
+                      {
+                      "Model": "CLS Shooting Brake, Model Year 2014",
+                      "AVG(CO2_gkm)": "235"
+                      },
+                      {
+                      "Model": "CLS-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "231"
+                      },
+                      {
+                      "Model": "E-Class Cabriolet, Model Year 2014",
+                      "AVG(CO2_gkm)": "157.8"
+                      },
+                      {
+                      "Model": "E-Class Coup, Model Year 2014",
+                      "AVG(CO2_gkm)": "153.75"
+                      },
+                      {
+                      "Model": "E-Class Estate, Model Year 2014",
+                      "AVG(CO2_gkm)": "180"
+                      },
+                      {
+                      "Model": "E-Class Saloon, Model Year 2014",
+                      "AVG(CO2_gkm)": "163"
+                      },
+                      {
+                      "Model": "GL-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "209"
+                      },
+                      {
+                      "Model": "GLA Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "130.4"
+                      },
+                      {
+                      "Model": "M-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "172"
+                      },
+                      {
+                      "Model": "M-Class, Model Year 2015",
+                      "AVG(CO2_gkm)": "159"
+                      },
+                      {
+                      "Model": "S-Class Limousine, Model Year 2014",
+                      "AVG(CO2_gkm)": "175.72727272727272"
+                      },
+                      {
+                      "Model": "S-Class Limousine, Model Year 2015",
+                      "AVG(CO2_gkm)": "178.15384615384616"
+                      },
+                      {
+                      "Model": "S-Class, Model Year 2014",
+                      "AVG(CO2_gkm)": "150.66666666666666"
+                      },
+                      {
+                      "Model": "S-Class, Model Year 2015",
+                      "AVG(CO2_gkm)": "150.66666666666666"
+                      }
+                      ]
+    ,
+    
+    "MINI": [
+             {
+             "Model": "MINI Clubman R55",
+             "AVG(CO2_gkm)": "140.5"
+             },
+             {
+             "Model": "MINI Convertible R57",
+             "AVG(CO2_gkm)": "143.5"
+             },
+             {
+             "Model": "MINI Countryman R60, From September 2010",
+             "AVG(CO2_gkm)": "158.33333333333334"
+             },
+             {
+             "Model": "MINI Coup R58, From October 2011",
+             "AVG(CO2_gkm)": "138.5"
+             },
+             {
+             "Model": "MINI Hatchback F56, From March 2014",
+             "AVG(CO2_gkm)": "107.61764705882354"
+             },
+             {
+             "Model": "MINI Paceman R61, From November 2012",
+             "AVG(CO2_gkm)": "160.75"
+             },
+             {
+             "Model": "MINI Roadster R59, From April 2012",
+             "AVG(CO2_gkm)": "143.5"
+             }
+             ]
+    ,
+    
+    "MITSUBISHI": [
+                   {
+                   "Model": "i-MiEV",
+                   "AVG(CO2_gkm)": "0"
+                   }
+                   ]
+    ,
+    
+    "NISSAN": [
+               {
+               "Model": "E-NV200, 2014",
+               "AVG(CO2_gkm)": "0"
+               },
+               {
+               "Model": "Leaf",
+               "AVG(CO2_gkm)": "0"
+               }
+               ]
+    ,
+    
+    "PEUGEOT": [
+                {
+                "Model": "308",
+                "AVG(CO2_gkm)": "103.54545454545455"
+                },
+                {
+                "Model": "508",
+                "AVG(CO2_gkm)": "109"
+                },
+                {
+                "Model": "508 SW",
+                "AVG(CO2_gkm)": "110"
+                },
+                {
+                "Model": "New 308 SW",
+                "AVG(CO2_gkm)": "105.9090909090909"
+                },
+                {
+                "Model": "RCZ-R",
+                "AVG(CO2_gkm)": "145"
+                }
+                ]
+    ,
+    
+    "PORSCHE": [
+                {
+                "Model": "911 (991)",
+                "AVG(CO2_gkm)": "216.43333333333334"
+                },
+                {
+                "Model": "Boxster",
+                "AVG(CO2_gkm)": "193.8"
+                },
+                {
+                "Model": "Cayman",
+                "AVG(CO2_gkm)": "193.8"
+                },
+                {
+                "Model": "Macan",
+                "AVG(CO2_gkm)": "192"
+                }
+                ]
+    ,
+    
+    "ROLLS ROYCE": [
+                    {
+                    "Model": "Ghost",
+                    "AVG(CO2_gkm)": "328"
+                    },
+                    {
+                    "Model": "Wraith",
+                    "AVG(CO2_gkm)": "327"
+                    }
+                    ]
+    ,
+    
+    "SKODA": [
+              {
+              "Model": "New Octavia Estate, 2013",
+              "AVG(CO2_gkm)": "145.5"
+              },
+              {
+              "Model": "New Octavia, 2013",
+              "AVG(CO2_gkm)": "145.5"
+              }
+              ]
+    ,
+    
+    "SUBARU": [
+               {
+               "Model": "WRX STI AWD, From 2015 MY",
+               "AVG(CO2_gkm)": "242"
+               }
+               ]
+    ,
+    
+    "SUZUKI": [
+               {
+               "Model": "SX4 S-Cross",
+               "AVG(CO2_gkm)": "129.25"
+               }
+               ]
+    ,
+    
+    "VAUXHALL":[
+                {
+                "Model": "Astra 5 Door Hatchback, Model Year 2014",
+                "AVG(CO2_gkm)": "97"
+                },
+                {
+                "Model": "Meriva, Model Year 2014",
+                "AVG(CO2_gkm)": "116"
+                },
+                {
+                "Model": "Zafira, Model Year 2014",
+                "AVG(CO2_gkm)": "109"
+                }
+                ]
+    ,
+    
+    "VOLKSWAGEN": [
+                   {
+                   "Model": "New Golf, 2013",
+                   "AVG(CO2_gkm)": "132.25"
+                   }
+                   ]
+    ,
+    
+    "VOLVO": [
+              {
+              "Model": "S60, MY15",
+              "AVG(CO2_gkm)": "104"
+              },
+              {
+              "Model": "S60, Model Year 2014.5",
+              "AVG(CO2_gkm)": "119"
+              },
+              {
+              "Model": "S80, MY15",
+              "AVG(CO2_gkm)": "108.5"
+              },
+              {
+              "Model": "S80, Model Year 2014.5",
+              "AVG(CO2_gkm)": "111.33333333333333"
+              },
+              {
+              "Model": "V40, MY15",
+              "AVG(CO2_gkm)": "112.2"
+              },
+              {
+              "Model": "V60, MY15",
+              "AVG(CO2_gkm)": "105.75"
+              },
+              {
+              "Model": "V60, Model Year 2014.5",
+              "AVG(CO2_gkm)": "116"
+              },
+              {
+              "Model": "V70, MY15",
+              "AVG(CO2_gkm)": "113"
+              },
+              {
+              "Model": "V70, Model Year 2014.5",
+              "AVG(CO2_gkm)": "115"
+              },
+              {
+              "Model": "XC60, MY15",
+              "AVG(CO2_gkm)": "120.5"
+              },
+              {
+              "Model": "XC60, Model Year 2014.5",
+              "AVG(CO2_gkm)": "120.5"
+              },
+              {
+              "Model": "XC70, MY15",
+              "AVG(CO2_gkm)": "123"
+              },
+              {
+              "Model": "XC70, Model Year 2014.5",
+              "AVG(CO2_gkm)": "123"
+              }
+              ]
+}
