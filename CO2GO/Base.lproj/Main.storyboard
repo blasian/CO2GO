@@ -35,6 +35,12 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
+                                <rect key="frame" x="196" y="510" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-OJ-9TH">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="381"/>
                             </mapView>
@@ -50,8 +56,14 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-LV-NpY">
-                                <rect key="frame" x="196" y="510" width="10" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CO2 Emitted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-Ny-Nod">
+                                <rect key="frame" x="70" y="426" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3o-bq-Y4W">
+                                <rect key="frame" x="201" y="426" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -59,12 +71,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MgN-Ny-Nod" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="1p1-xl-4hF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q3o-bq-Y4W" secondAttribute="trailing" constant="30" id="52E-Sg-XGY"/>
                             <constraint firstItem="gnn-JL-3vx" firstAttribute="centerY" secondItem="E07-aC-Yme" secondAttribute="centerY" id="7gk-ND-amC"/>
                             <constraint firstItem="gnn-JL-3vx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="9dO-Oi-E4d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E07-aC-Yme" secondAttribute="trailing" constant="30" id="Iyq-c5-vh4"/>
                             <constraint firstItem="ffF-kZ-JOp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="JaJ-cg-fvY"/>
+                            <constraint firstItem="gnn-JL-3vx" firstAttribute="top" secondItem="MgN-Ny-Nod" secondAttribute="bottom" constant="30" id="Mj7-ut-kHU"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ffF-kZ-JOp" secondAttribute="bottom" constant="50" id="VzL-jM-Emk"/>
                             <constraint firstItem="2LE-OQ-byh" firstAttribute="top" secondItem="pRI-OJ-9TH" secondAttribute="bottom" constant="30" id="awE-Nn-wmF"/>
+                            <constraint firstItem="MgN-Ny-Nod" firstAttribute="centerY" secondItem="Q3o-bq-Y4W" secondAttribute="centerY" id="q5N-rj-tz4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="30" id="qET-q8-ePw"/>
                             <constraint firstItem="ffF-kZ-JOp" firstAttribute="top" secondItem="gnn-JL-3vx" secondAttribute="bottom" constant="30" id="s6j-8s-jpb"/>
                             <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="tQC-wF-NbR"/>
@@ -102,6 +118,7 @@
                         <outlet property="distance_label" destination="E07-aC-Yme" id="oJ9-br-f6U"/>
                         <outlet property="speed_label" destination="bMf-LV-NpY" id="cAP-tk-2Rb"/>
                         <outlet property="track_button" destination="2LE-OQ-byh" id="yfM-oB-8uA"/>
+                        <outlet property="tripEmissionsLabel" destination="Q3o-bq-Y4W" id="ZKD-uf-eEI"/>
                         <outlet property="viewStatsButton" destination="DIb-PJ-o2t" id="ve2-Zb-xBr"/>
                     </connections>
                 </viewController>
