@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LE-OQ-byh">
                                 <rect key="frame" x="235" y="389" width="130" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" red="0.16320245589999999" green="0.7222024937" blue="0.0037068669810000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,11 +80,14 @@
                             <constraint firstItem="gnn-JL-3vx" firstAttribute="top" secondItem="MgN-Ny-Nod" secondAttribute="bottom" constant="30" id="Mj7-ut-kHU"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ffF-kZ-JOp" secondAttribute="bottom" constant="50" id="VzL-jM-Emk"/>
                             <constraint firstItem="2LE-OQ-byh" firstAttribute="top" secondItem="pRI-OJ-9TH" secondAttribute="bottom" constant="30" id="awE-Nn-wmF"/>
+                            <constraint firstItem="pRI-OJ-9TH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="bzg-5K-PeM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pRI-OJ-9TH" secondAttribute="trailing" constant="-16" id="ghQ-6u-hzE"/>
                             <constraint firstItem="MgN-Ny-Nod" firstAttribute="centerY" secondItem="Q3o-bq-Y4W" secondAttribute="centerY" id="q5N-rj-tz4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bMf-LV-NpY" secondAttribute="trailing" constant="30" id="qET-q8-ePw"/>
                             <constraint firstItem="ffF-kZ-JOp" firstAttribute="top" secondItem="gnn-JL-3vx" secondAttribute="bottom" constant="30" id="s6j-8s-jpb"/>
                             <constraint firstAttribute="centerX" secondItem="2LE-OQ-byh" secondAttribute="centerX" id="tQC-wF-NbR"/>
                             <constraint firstItem="bMf-LV-NpY" firstAttribute="centerY" secondItem="ffF-kZ-JOp" secondAttribute="centerY" constant="6" id="upO-0b-wBh"/>
+                            <constraint firstItem="Q3o-bq-Y4W" firstAttribute="top" secondItem="2LE-OQ-byh" secondAttribute="bottom" constant="30" id="xCk-Mz-jrQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CO2GO" id="uXM-5g-1Fl">
@@ -116,6 +119,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="distance_label" destination="E07-aC-Yme" id="oJ9-br-f6U"/>
+                        <outlet property="map" destination="pRI-OJ-9TH" id="k5h-ks-DTX"/>
                         <outlet property="speed_label" destination="bMf-LV-NpY" id="cAP-tk-2Rb"/>
                         <outlet property="track_button" destination="2LE-OQ-byh" id="yfM-oB-8uA"/>
                         <outlet property="tripEmissionsLabel" destination="Q3o-bq-Y4W" id="ZKD-uf-eEI"/>
