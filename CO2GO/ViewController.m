@@ -36,7 +36,7 @@ lastLocation;
 @implementation ViewController
 - (IBAction)statButtonPressed:(id)sender {
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
-    UIViewController *initialViewController = [secondStoryBoard instantiateInitialViewController];
+    UIViewController *initialViewController = [secondStoryBoard instantiateViewControllerWithIdentifier:@"StatTableView"];
     [self.navigationController pushViewController:initialViewController animated:YES];
 }
 
