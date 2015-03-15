@@ -19,7 +19,7 @@
 @property (nonatomic) CLLocationSpeed speed;
 @property (strong, nonatomic) CLLocation* location;
 @property (weak, nonatomic) IBOutlet UILabel *speed_label;
-@property (strong, nonatomic) MKMapView *map;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) CLLocation* origin;
 @property (nonatomic) CLLocationDistance distance;
 @property (weak, nonatomic) IBOutlet UILabel *distance_label;
@@ -63,18 +63,15 @@
 - (void)startTracking {
     self.origin = self.location;
     [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-    [self.map setShowsUserLocation:YES];
     self.track_button.selected = YES;
     [self.clm startUpdatingLocation];
     self.lastTrip = [[Trip alloc] init];
     self.lastTrip.date = [NSDate date];
     self.tripEmissions = 0;
-    self.map.centerCoordinate = self.map.userLocation.location.coordinate;
 }
 
 - (void)stopTracking {
     [self.clm stopUpdatingLocation];
-    [self.map setShowsUserLocation:NO];
     self.track_button.selected = NO;
     self.lastTrip.distance = self.distance;
     int driving = [[self.travelLog objectAtIndex:0] intValue];
@@ -104,6 +101,7 @@
     [self.track_button setTitle:@"Stop" forState:UIControlStateSelected];
     [self.track_button setTitle:@"Track" forState:UIControlStateNormal];
     self.travelLog = [[NSMutableArray alloc] init];
+    [self.map setShowsUserLocation:YES];
     NSNumber *zero = [NSNumber numberWithInt:0];
     [self.travelLog insertObject:zero atIndex:0];
     [self.travelLog insertObject:zero atIndex:1];
@@ -130,9 +128,15 @@
     [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
     [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f", self.tripEmissions]];
     
-    [self.map setCenterCoordinate:self.map.userLocation.location.coordinate animated:YES];
-    MKCoordinateRegion zoomRegion = [self.map regionThatFits:MKCoordinateRegionMakeWithDistance(_map.userLocation.coordinate, 800, 800)];
-    [self.map setRegion:zoomRegion animated:YES];
+    [self.speed_label setText:[NSString stringWithFormat:@"%f km/h", self.speed]];
+    [self.distance_label setText: [NSString stringWithFormat:@"%f km", self.distance]];
+    [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f g", self.tripEmissions]];
+    
+    MKCoordinateRegion region;
+    region.center = self.clm.location.coordinate;
+    region.span = MKCoordinateSpanMake(0.01, 0.01);
+    region = [self.map regionThatFits:region];
+    [self.map setRegion:region animated:YES];
     
     if (self.speed > 7.5){
         int integer = [[self.travelLog objectAtIndex:0] intValue];
