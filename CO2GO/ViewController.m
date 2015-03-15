@@ -127,6 +127,9 @@
     [self.speed_label setText:[NSString stringWithFormat:@"%f", self.speed]];
     [self.distance_label setText: [NSString stringWithFormat:@"%f", self.distance]];
     [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%f", self.tripEmissions]];
+    [self.map setCenterCoordinate:self.map.userLocation.coordinate animated:YES];
+    MKCoordinateRegion zoomRegion = [self.map regionThatFits:MKCoordinateRegionMakeWithDistance(_map.userLocation.coordinate, 800, 800)];
+    [self.map setRegion:zoomRegion animated:YES];
     if (self.speed > 7.5){
         int integer = [[self.travelLog objectAtIndex:0] intValue];
         NSNumber *value = [NSNumber numberWithInt:integer + 1];

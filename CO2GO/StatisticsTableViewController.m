@@ -34,7 +34,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[StatStore sharedStore] allStats] count];
+    NSArray* stats = [[StatStore sharedStore] allStats];
+    return [stats count];
 }
 
 
