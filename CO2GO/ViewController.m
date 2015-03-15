@@ -34,6 +34,8 @@ lastLocation;
 @end
 
 @implementation ViewController
+
+
 - (IBAction)statButtonPressed:(id)sender {
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
     UIViewController *initialViewController = [secondStoryBoard instantiateViewControllerWithIdentifier:@"StatTableView"];
@@ -84,7 +86,7 @@ lastLocation;
     double avgEmissions = [self.car.emissions doubleValue];
     double emissions = totalDrive * avgEmissions;
     self.lastTrip.emissions = emissions;
-    self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow];
+    self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow] * -1;
     self.lastTrip.vehicle = self.car.brand;
     [[StatStore sharedStore] addStat:self.lastTrip];
 }
@@ -146,7 +148,7 @@ lastLocation;
     region.center = self.clm.location.coordinate;
     region.span = MKCoordinateSpanMake(0.01, 0.01);
     region = [self.map regionThatFits:region];
-    [self.map setRegion:region animated:YES];
+    //[self.map setRegion:region animated:YES];
     
     if (self.speed > 30){
         int integer = [[self.travelLog objectAtIndex:0] intValue];

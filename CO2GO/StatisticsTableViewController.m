@@ -43,8 +43,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTableCell"];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", ((Trip*)[[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row]).date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+    NSDate *trip_date = ((Trip*)[[[StatStore sharedStore] allStats] objectAtIndex:indexPath.row]).date;
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:trip_date]];
     return cell;
 }
 
@@ -54,7 +57,6 @@
     DetailStatViewController *tripVC = [secondaryStoryBoard instantiateViewControllerWithIdentifier:@"DetailView"];
     tripVC.trip = trip;
     [self.navigationController pushViewController:tripVC animated:YES];
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

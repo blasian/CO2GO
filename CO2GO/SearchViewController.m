@@ -57,7 +57,6 @@
     NSData *jsondata = [NSData dataWithContentsOfURL: file];
     NSError *e = nil;
     NSDictionary *jsonCarList = [NSJSONSerialization JSONObjectWithData:jsondata options: NSJSONReadingMutableContainers error: &e];
-    NSLog(@"%@",jsonCarList);
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     for (int i = 0; i < [brandArray count]; i++) {
