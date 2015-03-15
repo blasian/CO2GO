@@ -24,7 +24,6 @@
 		58EA595F1AB5139A007CB03F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		58EA59871AB5357F007CB03F /* Cars.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA59861AB5357F007CB03F /* Cars.m */; };
 		58EA59901AB54222007CB03F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EA598E1AB54222007CB03F /* SearchViewController.m */; };
-		58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58EA598F1AB54222007CB03F /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		58EA59861AB5357F007CB03F /* Cars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cars.m; sourceTree = "<group>"; };
 		58EA598D1AB54222007CB03F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		58EA598E1AB54222007CB03F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		58EA598F1AB54222007CB03F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				58E39E2A1AB3EA3C00400CF9 /* ViewController.m */,
 				58EA598D1AB54222007CB03F /* SearchViewController.h */,
 				58EA598E1AB54222007CB03F /* SearchViewController.m */,
-				58EA598F1AB54222007CB03F /* SearchViewController.xib */,
 				58E39E521AB438BD00400CF9 /* Trip.m */,
 				58EA595B1AB511CD007CB03F /* cars.json */,
 				58E39E531AB438BD00400CF9 /* Trip.h */,
@@ -243,7 +240,6 @@
 			files = (
 				58E39E2E1AB3EA3C00400CF9 /* Main.storyboard in Resources */,
 				58E39E331AB3EA3C00400CF9 /* LaunchScreen.xib in Resources */,
-				58EA59911AB54222007CB03F /* SearchViewController.xib in Resources */,
 				58E39E301AB3EA3C00400CF9 /* Images.xcassets in Resources */,
 				58EA595C1AB511CD007CB03F /* cars.json in Resources */,
 				56525C451AB4C32F0040D225 /* StatisticsTableStoryboard.storyboard in Resources */,
