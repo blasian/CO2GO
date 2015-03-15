@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Michael Spearman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface SearchViewController : UITableViewController
+@interface SearchViewController : ViewController
 
 @end
