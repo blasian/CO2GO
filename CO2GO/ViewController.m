@@ -26,6 +26,7 @@
 @property (strong, nonatomic) Trip *trip;
 @property (weak, nonatomic) IBOutlet UIButton *viewStatsButton;
 @property (weak, nonatomic) IBOutlet UIButton *vehicleButton;
+@property (weak, nonatomic) IBOutlet UILabel *carLabel;
 
 
 @end
@@ -39,7 +40,8 @@
 
 - (IBAction)vehicleButtonPressed:(id)sender {
     UIStoryboard *secondaryStoryBoard = [UIStoryboard storyboardWithName:@"CarTableViewStoryboard" bundle:nil];
-    UITableViewController *tableViewController = [secondaryStoryBoard instantiateInitialViewController];
+    SearchViewController *tableViewController = [secondaryStoryBoard instantiateInitialViewController];
+    tableViewController.parentController = self;
     [self.navigationController pushViewController:tableViewController animated:YES];
 }
 
@@ -120,6 +122,9 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    self.carLabel.text = self.car.brand;
+}
 
 
 - (void)didReceiveMemoryWarning {

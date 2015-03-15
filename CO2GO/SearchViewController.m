@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "Cars.h"
 #import "Car.h"
+#import "ViewController.h"
 
 @interface SearchViewController ()
 
@@ -68,6 +69,7 @@
             [carArray addObject:car];
         }
     }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -134,21 +136,16 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    self.parentController.car = [carArray objectAtIndex:indexPath.row];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
-*/
+
 
 /*
 #pragma mark - Navigation

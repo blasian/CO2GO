@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface SearchViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic) ViewController *parentController;
 
 @end
