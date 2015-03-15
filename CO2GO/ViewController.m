@@ -65,6 +65,7 @@ lastLocation;
 }
 
 - (void)startTracking {
+    self.location = self.clm.location;
     self.origin = self.location;
     [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     self.track_button.selected = YES;
@@ -73,21 +74,21 @@ lastLocation;
     self.lastTrip.date = [NSDate date];
     self.tripEmissions = 0;
     self.lastLocation = 0;
+    self.lastTrip.distance = 0;
+    self.lastTrip.emissions = 0;
+    self.distance = 0;
 }
 
 - (void)stopTracking {
     [self.clm stopUpdatingLocation];
     self.track_button.selected = NO;
     self.lastTrip.distance = self.distance;
-    int driving = [[self.travelLog objectAtIndex:0] intValue];
-    int walking = [[self.travelLog objectAtIndex:1] intValue];
-    double fraction = driving/(walking + driving);
-    double totalDrive = (fraction * self.distance)/1000;
-    double avgEmissions = [self.car.emissions doubleValue];
-    double emissions = totalDrive * avgEmissions;
-    self.lastTrip.emissions = emissions;
+    double driving = [[self.travelLog objectAtIndex:0] intValue];
+    double walking = [[self.travelLog objectAtIndex:1] intValue];
+    self.lastTrip.emissions = self.tripEmissions;
     self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow] * -1;
     self.lastTrip.vehicle = self.car.brand;
+    self.lastTrip.distance = self.distance;
     [[StatStore sharedStore] addStat:self.lastTrip];
 }
 
@@ -137,12 +138,12 @@ lastLocation;
     self.speed = self.location.speed * 3.6;
     self.distance = self.distance + [self.lastLocation distanceFromLocation:self.location] / 1000;
     if (self.speed > 30) {
-        self.tripEmissions = self.tripEmissions + emissions;
+        self.tripEmissions = emissions;
     }
     
-    [self.speed_label setText:[NSString stringWithFormat:@"%.02f", ((self.speed * 100)/100)]];
-    [self.distance_label setText: [NSString stringWithFormat:@"%.02f", (self.distance * 100)/100]];
-    [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%.02f", (self.tripEmissions * 100)/100]];
+    [self.speed_label setText:[NSString stringWithFormat:@"%.02f km/h", ((self.speed * 100)/100)]];
+    [self.distance_label setText: [NSString stringWithFormat:@"%.02f km", (self.distance * 100)/100]];
+    [self.tripEmissionsLabel setText:[NSString stringWithFormat:@"%.02f g", (self.tripEmissions * 100)/100]];
     
     MKCoordinateRegion region;
     region.center = self.clm.location.coordinate;
