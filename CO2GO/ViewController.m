@@ -34,6 +34,8 @@ lastLocation;
 @end
 
 @implementation ViewController
+
+
 - (IBAction)statButtonPressed:(id)sender {
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:@"StatisticsTableStoryboard" bundle:nil];
     UIViewController *initialViewController = [secondStoryBoard instantiateViewControllerWithIdentifier:@"StatTableView"];
@@ -84,7 +86,7 @@ lastLocation;
     double avgEmissions = [self.car.emissions doubleValue];
     double emissions = totalDrive * avgEmissions;
     self.lastTrip.emissions = emissions;
-    self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow];
+    self.lastTrip.timeElapsed = [self.lastTrip.date timeIntervalSinceNow] * -1;
     [[StatStore sharedStore] addStat:self.lastTrip];
 }
 
