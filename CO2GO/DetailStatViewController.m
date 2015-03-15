@@ -7,6 +7,8 @@
 //
 
 #import "DetailStatViewController.h"
+#import "StatStore.h"
+#import "Trip.h"
 
 @interface DetailStatViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *date_label;
@@ -27,14 +29,18 @@
     [self.date_label setText:[NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:self.trip.date]]];
     [self.distance_label setText:[NSString stringWithFormat:@"%f", self.trip.distance]];
     [self.emissions_label setText:[NSString stringWithFormat:@"%f", self.trip.emissions]];
-    //[self.vehicle_label setText:self.trip.vehicle];
+    [self.vehicle_label setText:self.trip.vehicle];
     [self.interval_label setText:[NSString stringWithFormat:@"%f", self.trip.timeElapsed]];
+    NSArray *allStats = [[StatStore sharedStore] allStats];
+    double co = 0;
+    double dist = 0;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
