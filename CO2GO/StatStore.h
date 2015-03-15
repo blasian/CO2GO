@@ -11,7 +11,6 @@
 
 @interface StatStore : NSObject
 
-@property (nonatomic, readonly) NSMutableArray *statistics;
 @property (nonatomic, readonly) NSArray *allStats;
 
 + (instancetype) sharedStore;

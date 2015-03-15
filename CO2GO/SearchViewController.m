@@ -65,7 +65,7 @@
             Car *car = [[Car alloc] init];
             car.brand = brand;
             car.model = [value objectForKey:@"Model"];
-            car.emissions = [value objectForKey:@"AVG(CO2_gkm"];
+            car.emissions = [value objectForKey:@"AVG(CO2_gkm)"];
             [carArray addObject:car];
         }
     }

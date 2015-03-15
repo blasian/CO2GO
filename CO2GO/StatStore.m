@@ -36,7 +36,7 @@
 {
     self = [super init];
     if (self) {
-        _statistics = [[NSMutableArray alloc] init];
+        _privateStore = [[NSMutableArray alloc] init];
     }
     return self;
 }
