@@ -10,6 +10,7 @@
 #import "Trip.h"
 #import "StatisticsTableViewController.h"
 #import "SearchViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
