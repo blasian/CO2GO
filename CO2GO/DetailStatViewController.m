@@ -51,7 +51,7 @@
     }
     [self.tripCO2Avg setText:[NSString stringWithFormat:@"%.02f", myAvg]];
     [self.historicalCO2Avg setText:[NSString stringWithFormat:@"%.02f", histAvg]];
-    self.tripCO2Avg.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha: 1];
+    self.historicalCO2Avg.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha: 1];
 }
 
 - (void)didReceiveMemoryWarning {
