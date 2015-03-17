@@ -32,7 +32,7 @@
     [self.distance_label setText:[NSString stringWithFormat:@"%.02f km", self.trip.distance]];
     [self.emissions_label setText:[NSString stringWithFormat:@"%.02f g", self.trip.emissions]];
     [self.vehicle_label setText:self.trip.vehicle];
-    [self.interval_label setText:[NSString stringWithFormat:@"%.02f mins", (self.trip.timeElapsed /60)]];
+    [self.interval_label setText:[NSString stringWithFormat:@"%.02f mins", (self.trip.timeElapsed / 60.)]];
     NSArray *allStats = [[StatStore sharedStore] allStats];
     double co = 0;
     double dist = 0;
@@ -49,9 +49,9 @@
     } else {
         self.tripCO2Avg.textColor = [[UIColor alloc] initWithRed:234./255 green:38./255 blue:24./255 alpha:1];
     }
+    self.historicalCO2Avg.textColor = [UIColor blackColor];
     [self.tripCO2Avg setText:[NSString stringWithFormat:@"%.02f", myAvg]];
     [self.historicalCO2Avg setText:[NSString stringWithFormat:@"%.02f", histAvg]];
-    self.historicalCO2Avg.textColor = [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha: 1];
 }
 
 - (void)didReceiveMemoryWarning {
